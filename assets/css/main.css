@@ -1,0 +1,93 @@
+:root {
+  --beige: #FCF3E6;
+  --nero: #000;
+}
+* {
+  font-family: "Lexend", sans-serif;
+  vertical-align: baseline;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  flex-shrink: 1;
+  transition: 0.3s;
+  margin: 0;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-focus-ring-color: rgba(0, 0, 0, 0);
+}
+.contenitore {
+  max-width: 100%;
+  width: 100%;
+  padding: 0 16px;
+}
+.pulsante {
+  min-width: 254px;
+  border-radius: 20px;
+  line-height: 55px;
+  display: block;
+  text-align: center;
+  width: fit-content;
+  margin: 0 auto;
+}
+.pulsante.neroBeige {
+  background-color: var(--nero);
+  color: var(--beige);
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+body.beige {
+  background-color: var(--beige);
+}
+.logoAnimazione {
+  display: none;
+}
+.logoAnimazione.attivato {
+  display: block;
+}
+.logoAnimazione .logo {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+.inizio {
+  display: none;
+  opacity: 0;
+}
+.inizio.attivato {
+  display: block;
+}
+.inizio.mostrare {
+  opacity: 1;
+  animation: animazioneInizio;
+  animation-duration: 1s;
+}
+.inizio .animazione {
+  width: calc(100vw - 8px);
+  height: auto;
+  object-fit: contain;
+}
+.inizio .contenitorePulsanti {
+  position: absolute;
+  bottom: 85px;
+}
+.bar {
+  width: 134px;
+  height: 5px;
+  border-radius: 100px;
+  background-color: var(--nero);
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%);
+}
+@keyframes animazioneInizio {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1px;
+  }
+}
