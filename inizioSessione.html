@@ -33,25 +33,198 @@
                         <div class="azioni">
                             <button class="pulsante roso" onclick="accedi()">Accedi</button>
                             <p class="testoCreaAccount">Crea ora il tuo account</p>
-                            <button class="registrati">Registrati</button>
+                            <button class="pulsanteRegistrati" onclick="registrati()">Registrati</button>
                         </div>
                     </div>
+
                     <div id="accedi" class="accedi">
                         <div class="modulo">
                             <div class="inputContenitore">
                                 <span>Email</span>
-                                <input type="email" name="email" class="inputAccedi" placeholder="Inserisci il tuo indirizzo email">
+                                <input type="email" name="email" class="inputAccedi"
+                                    placeholder="Inserisci il tuo indirizzo email">
                             </div>
 
                             <div class="inputContenitore">
                                 <span>Password</span>
-                                <input type="password" name="password" class="inputAccedi" placeholder="Inserisci la tua password">
+                                <input type="password" name="password" class="inputAccedi"
+                                    placeholder="Inserisci la tua password">
                             </div>
 
-                            <p class="passwordDimenticata">Password dimenticata? <span class="clicca">Clicca qui.</span></p>
+                            <p class="passwordDimenticata">Password dimenticata? <span class="clicca">Clicca qui.</span>
+                            </p>
                         </div>
                         <div class="azioni">
                             <button class="pulsante beige">Accedi</button>
+                        </div>
+                    </div>
+
+                    <div id="registrati" class="registrati">
+                        <div class="modalitaRegistrazione">
+                            <button class="pulsanteRegistrazione" onclick="mostrarePopUpGoogle();">
+                                <img class="icon" src="assets/img/icons/google.png">
+                                <span class="testoPulsante">Continua con Google</span>
+                            </button>
+                            <button class="pulsanteRegistrazione">
+                                <img class="icon" src="assets/img/icons/facebook.png">
+                                <span class="testoPulsante">Continua con Facebook</span>
+                            </button>
+                            <button class="pulsanteRegistrazione">
+                                <svg class="icon email" width="30" height="23" viewBox="0 0 30 23" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_50_762)">
+                                        <path
+                                            d="M15.0073 0C18.4404 0 21.8765 0 25.3097 0C26.1605 0 27.0084 0 27.8593 0C28.9207 0 29.7271 0.662488 29.9583 1.73596C29.988 1.87398 29.9998 2.01814 29.9998 2.16229C29.9998 6.09428 29.9998 10.0232 29.9998 13.9552C29.9998 16.2402 29.9998 18.5251 30.0028 20.8101C30.0028 21.8774 29.3565 22.7209 28.3455 22.954C28.221 22.9816 28.0906 23 27.966 23C21.414 23.0031 14.862 23 8.30995 23C6.23465 23 4.15934 23 2.08404 23.0031C1.1798 23.0031 0.388219 22.4203 0.115465 21.5309C0.0472766 21.31 0.00873529 21.0708 0.00873529 20.8408C-0.00312359 17.0315 -0.000158868 13.2222 -0.000158868 9.41285C-0.000158868 7.0052 -0.000158868 4.59755 -0.000158868 2.18989C-0.000158868 1.12255 0.649115 0.282171 1.65712 0.0490732C1.79053 0.0184025 1.92987 0.00306708 2.06625 0.00306708C3.94885 0 5.83145 0.00306708 7.71404 0.00306708C10.1451 0.00306708 12.5762 0.00306708 15.0073 0.00306708V0ZM1.61858 1.83104C2.00696 2.16229 2.38051 2.48126 2.7511 2.80024C3.68202 3.59768 4.61295 4.39512 5.54387 5.19256C6.6586 6.14642 7.77334 7.09721 8.88807 8.04801C9.66779 8.71356 10.4475 9.37912 11.2272 10.0477C11.9269 10.6458 12.6384 11.2316 13.3233 11.845C14.1801 12.6179 15.4994 12.7222 16.4155 12.0352C16.8513 11.7101 17.2545 11.339 17.6696 10.9863C18.7161 10.0937 19.7597 9.19509 20.8062 8.30257C21.8646 7.39779 22.9231 6.49607 23.9785 5.59435C25.1585 4.58528 26.3384 3.57621 27.5154 2.57021C27.8 2.32791 28.0817 2.08254 28.3722 1.83718C28.2566 1.67156 28.1143 1.59488 27.9245 1.59488C26.4036 1.59488 24.8798 1.59488 23.3589 1.59488C20.8092 1.59488 18.2596 1.59795 15.7099 1.59795C12.3212 1.59795 8.92958 1.59488 5.5409 1.59488C4.37873 1.59488 3.21953 1.59795 2.05736 1.59488C1.87651 1.58874 1.73717 1.66542 1.61858 1.83104ZM2.98531 21.4021C11.0108 21.4021 18.9948 21.4021 27.0114 21.4021C26.9699 21.3683 26.9521 21.353 26.9343 21.3407C25.8522 20.5034 24.7671 19.6692 23.685 18.8318C21.4555 17.1112 19.2231 15.3906 16.9936 13.67C16.9225 13.6147 16.8661 13.6055 16.7831 13.6485C16.288 13.9031 15.7603 14.0441 15.2089 14.0748C14.5121 14.1116 13.848 13.9675 13.2195 13.6485C13.1365 13.6055 13.0802 13.6147 13.009 13.67C12.09 14.3815 11.1679 15.0931 10.2459 15.8046C8.30106 17.2983 6.35916 18.795 4.41727 20.2948C3.94885 20.6568 3.48042 21.0187 2.98531 21.4021ZM1.54742 3.82158C1.54742 9.40672 1.54742 14.9612 1.54742 20.5371C4.98057 17.8872 8.39889 15.2526 11.8261 12.6087C8.39889 9.67969 4.98354 6.75983 1.54742 3.82158ZM28.4582 3.81851C25.0161 6.75983 21.5978 9.68276 18.1736 12.6118C21.6038 15.2556 25.0221 17.8933 28.4582 20.5402C28.4582 14.9581 28.4582 9.40672 28.4582 3.81851Z"
+                                            fill="currentColor" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_50_762">
+                                            <rect width="30" height="23" fill="currentColor" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <span class="testoPulsante">Continua con Email</span>
+                            </button>
+                        </div>
+                        <div class="azioni">
+                            <p class="haiGiaAccount">Hai già un account? <span class="accediTesto"
+                                    onclick="accedi()">Accedi</span></p>
+                        </div>
+
+                        <div id="popUpGoogle" class="popUpGoogle">
+                            <p class="titolo">“AllerGo” desidera utilizzare “google.com” per eseguire l’accesso</p>
+                            <p class="sottotitolo">L’app e il sito web potranno condividere informazioni su di te.</p>
+                            <div class="azioniPopUp">
+                                <button class="pulsantePopUp" onclick="nasconderePopUpGoogle();">Annula</button>
+                                <button class="pulsantePopUp" onclick="mostrareScegliAccountGoogle();">Continua</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="scegliAccountGoogle" class="scegliAccountGoogle google">
+                        <div class="headerGoogle">
+                            <button class="pulsanteGoogle" onclick="nasconderecegliAccountGoogle();">Annula</button>
+                            <div class="urlGoogle">
+                                <img src="assets/svg/lock.svg">
+                                <p>accounts.google.com</p>
+                            </div>
+                            <div class="iconsGoogle">
+                                <img src="assets/svg/siteSettings.svg">
+                                <img src="assets/svg/reload.svg">
+                            </div>
+                        </div>
+                        <div class="titoloAccediGoogle">
+                            <img src="assets/img/icons/google.png">
+                            <p>Accedi con Google</p>
+                        </div>
+
+                        <div class="corpoGoogle">
+                            <img class="logoAllerGo" src="assets/img/logo.png">
+                            <p class="titoloGoogle">Scegli un account</p>
+                            <p class="sottotitoloGoogle">per continuare su <span class="appNome">AllerGo</span></p>
+                            <div class="utenti">
+                                <div class="utente" onclick="mostrareAccediAccountGoogle();">
+                                    <p class="iniziale">C</p>
+                                    <div class="informazioniUtente">
+                                        <p class="nomeUtente">Christian</p>
+                                        <p class="mailUtente">christian.rovelli@gmail.com</p>
+                                    </div>
+                                </div>
+                                <div class="utente">
+                                    <p class="iniziale">N</p>
+                                    <div class="informazioniUtente">
+                                        <p class="nomeUtente">Noemi</p>
+                                        <p class="mailUtente">noemi.rossetti@gmail.com</p>
+                                    </div>
+                                </div>
+                                <div class="altroAccount">
+                                    <img class="iconAccount" src="assets/svg/profile.svg">
+                                    <p class="altroAccountTesto">Utilizza un altro account</p>
+                                </div>
+                            </div>
+                            <p class="privacy">Prima di utilizzare questa app, esamina le <span
+                                    class="collegamento">norme sulla privacy</span> e i <span
+                                    class="collegamento">termini di servizio</span> di AllerGo.</p>
+                        </div>
+
+                        <div class="footerGoogle">
+                            <div class="collegamentiFooterGoogle">
+                                <div class="lingua">
+                                    <p>Italiano</p>
+                                    <img src="assets/svg/Arrow.svg">
+                                </div>
+                                <div class="collegamenti">
+                                    <p class="collegamento">Guida</p>
+                                    <p class="collegamento">Privacy</p>
+                                    <p class="collegamento">Termini</p>
+                                </div>
+                            </div>
+                            <div class="navFooterGoogle">
+                                <div class="frecce">
+                                    <img src="assets/svg/back.svg">
+                                    <img src="assets/svg/next.svg">
+                                </div>
+                                <img src="assets/svg/share.svg">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="accediAccountGoogle" class="accediAccountGoogle google">
+                        <div class="headerGoogle">
+                            <button class="pulsanteGoogle" onclick="annulaAccediAccountGoogle();">Annula</button>
+                            <div class="urlGoogle">
+                                <img src="assets/svg/lock.svg">
+                                <p>accounts.google.com</p>
+                            </div>
+                            <div class="iconsGoogle">
+                                <img src="assets/svg/siteSettings.svg">
+                                <img src="assets/svg/reload.svg">
+                            </div>
+                        </div>
+                        <div class="titoloAccediGoogle">
+                            <img src="assets/img/icons/google.png">
+                            <p>Accedi a AllerGo</p>
+                        </div>
+
+                        <div class="corpoGoogle">
+                            <img class="logoAllerGo" src="assets/img/logo.png">
+                            <p class="titoloGoogle">Accedi a AllerGo</p>
+                            <div class="accountSelezionato">
+                                <p class="iniziale">C</p>
+                                <p class="email">christian.rovelli@gmail.com</p>
+                                <img src="assets/svg/Arrow.svg">
+                            </div>
+                            <p class="privacy">
+                                Se continui, Google condividerà il tuo nome, il tuo indirizzo email, la tua preferenza della lingua e l’immagine del tuo profilo con AllerGo. Leggi le <span class="collegamento">norme sulla privacy</span> e i <span class="collegamento">termini di servizio</span> di AllerGo.
+                                <br>
+                                <br>
+                                Puoi gestire le funzionalità Accedi con Google nel tuo <span class="collegamento">Account Google</span>.
+                            </p>
+                            <div class="azioniGoogle">
+                                <button class="pulsanteGoogleAccount" onclick="annulaAccediAccountGoogle();">Annula</button>
+                                <a class="pulsanteGoogleAccount">Continua</button>
+                            </div>
+                        </div>
+
+                        <div class="footerGoogle">
+                            <div class="collegamentiFooterGoogle">
+                                <div class="lingua">
+                                    <p>Italiano</p>
+                                    <img src="assets/svg/Arrow.svg">
+                                </div>
+                                <div class="collegamenti">
+                                    <p class="collegamento">Guida</p>
+                                    <p class="collegamento">Privacy</p>
+                                    <p class="collegamento">Termini</p>
+                                </div>
+                            </div>
+                            <div class="navFooterGoogle">
+                                <div class="frecce">
+                                    <img src="assets/svg/backAttivato.svg" onclick="nascondereAccediAccountGoogle();">
+                                    <img src="assets/svg/next.svg">
+                                </div>
+                                <img src="assets/svg/share.svg">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -65,12 +238,74 @@
             document.getElementById('body').classList.add('nero');
             document.getElementById('benvenuto').classList.remove('attivato');
             document.getElementById('accedi').classList.add('attivato');
+            document.getElementById('registrati').classList.remove('attivato');
+        }
+
+        function registrati() {
+            document.getElementById('body').classList.add('nero');
+            document.getElementById('benvenuto').classList.remove('attivato');
+            document.getElementById('accedi').classList.remove('attivato');
+            document.getElementById('registrati').classList.add('attivato');
         }
 
         function ritorno() {
             document.getElementById('body').classList.remove('nero');
             document.getElementById('accedi').classList.remove('attivato');
+            document.getElementById('registrati').classList.remove('attivato');
             document.getElementById('benvenuto').classList.add('attivato');
+        }
+
+        function mostrarePopUpGoogle() {
+            document.getElementById("popUpGoogle").classList.add("attivato");
+            setTimeout(function () {
+                document.getElementById("popUpGoogle").classList.add("mostrare");
+            }, 100);
+        }
+
+        function nasconderePopUpGoogle() {
+            document.getElementById("popUpGoogle").classList.add("nascondere");
+            setTimeout(function () {
+                document.getElementById("popUpGoogle").classList.remove("mostrare");
+                document.getElementById("popUpGoogle").classList.remove("attivato");
+                document.getElementById("popUpGoogle").classList.remove("nascondere");
+
+            }, 500);
+        }
+
+        function mostrareScegliAccountGoogle(){
+            document.getElementById("scegliAccountGoogle").classList.add("mostrare");
+            document.getElementById("popUpGoogle").classList.remove("mostrare");
+            document.getElementById("popUpGoogle").classList.remove("attivato");
+        }
+        
+        function nasconderecegliAccountGoogle(){
+            document.getElementById("scegliAccountGoogle").classList.add("nascondere");
+            setTimeout(function () {
+                document.getElementById("scegliAccountGoogle").classList.remove("mostrare");
+                document.getElementById("scegliAccountGoogle").classList.remove("nascondere");
+            }, 500);
+        }
+
+        function mostrareAccediAccountGoogle(){
+            document.getElementById("accediAccountGoogle").classList.add("mostrare");
+        }
+
+        function nascondereAccediAccountGoogle(){
+            document.getElementById("accediAccountGoogle").classList.add("nascondere");
+            setTimeout(function () {
+                document.getElementById("accediAccountGoogle").classList.remove("mostrare");
+                document.getElementById("accediAccountGoogle").classList.remove("nascondere");
+            }, 500);
+        }
+
+        function annulaAccediAccountGoogle(){
+            document.getElementById("scegliAccountGoogle").classList.remove("mostrare");
+            document.getElementById("scegliAccountGoogle").classList.remove("nascondere");
+            document.getElementById("accediAccountGoogle").classList.add("annula");
+            setTimeout(function () {
+                document.getElementById("accediAccountGoogle").classList.remove("mostrare");
+                document.getElementById("accediAccountGoogle").classList.remove("annula");
+            }, 500);
         }
     </script>
 </body>
