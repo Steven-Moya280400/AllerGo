@@ -1,10 +1,12 @@
 :root {
     --beige: #FCF3E6;
     --nero: #000;
+    --roso: #F20815;
+    --bianco: #fff;
 }
 
 * {
-    font-family: "Lexend", sans-serif;
+    font-family: 'DM Sans';
     vertical-align: baseline;
     text-decoration: none;
     -webkit-box-sizing: border-box;
@@ -27,15 +29,48 @@
 .pulsante {
     min-width: 254px;
     border-radius: 20px;
-    line-height: 55px;
     display: block;
     text-align: center;
     width: fit-content;
     margin: 0 auto;
+    border: none;
+    font-weight: 400;
+    font-size: 18px;
+    padding: 17px;
+
+    &:focus,
+    &:focus-visible {
+        outline: none;
+    }
+
 
     &.neroBeige {
         background-color: var(--nero);
         color: var(--beige);
+    }
+
+    &.roso {
+        background-color: var(--roso);
+        color: var(--beige);
+
+        &:hover {
+            background-color: var(--nero);
+            color: var(--roso);
+            font-weight: 600;
+            font-size: 19px;
+        }
+    }
+
+    &.beige {
+        background-color: var(--beige);
+        color: var(--nero);
+
+        &:hover {
+            background-color: var(--roso);
+            color: var(--beige);
+            font-weight: 600;
+            font-size: 19px;
+        }
     }
 }
 
@@ -45,6 +80,14 @@ body {
 
     &.beige {
         background-color: var(--beige);
+    }
+
+    &.nero {
+        background-color: var(--nero);
+
+        .bar {
+            background-color: var(--beige);
+        }
     }
 }
 
@@ -72,7 +115,7 @@ body {
 
     &.mostrare {
         opacity: 1;
-        animation: animazioneInizio;
+        animation: animazioneSpettacolo;
         animation-duration: 1s;
     }
 
@@ -99,7 +142,194 @@ body {
     transform: translate(-50%);
 }
 
-@keyframes animazioneInizio {
+.inizioSessione {
+    display: none;
+    opacity: 0;
+
+    &.attivato {
+        display: block;
+    }
+
+    &.mostrare {
+        opacity: 1;
+        animation: animazioneSpettacolo;
+        animation-duration: 1s;
+    }
+
+    .inizioSessioneContenuto {
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        grid-template-rows: 69px 69px 1fr;
+        height: 100vh;
+        width: 100%;
+
+        .ritorno {
+            margin: 30px 22px 17px 22px;
+            background-color: #0000;
+            border: none;
+            width: 11px;
+            height: 22px;
+            padding: 0;
+            cursor: pointer;
+
+            .icon {
+                color: var(--beige);
+                object-fit: contain;
+                width: 11px;
+                height: 22px;
+            }
+        }
+
+        .logo {
+            display: block;
+            margin: 0 auto;
+        }
+
+        .benvenuto {
+            padding-bottom: 67px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            display: none;
+
+            &.attivato {
+                display: flex;
+            }
+
+            .informazioni {
+                display: flex;
+                height: calc(100% - 122px);
+                align-items: center;
+                justify-content: center;
+
+                .testo {
+                    font-size: 24px;
+                    line-height: 31.25px;
+                    text-align: center;
+                    font-weight: 700;
+                }
+            }
+
+            .azioni {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 8px;
+                min-height: 122px;
+
+                .testoCreaAccount {
+                    color: #00000073;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 20.83px;
+                    margin-top: 3px;
+                }
+
+                .registrati {
+                    color: var(--roso);
+                    display: block;
+                    font-size: 16px;
+                    font-weight: 800;
+                    line-height: 20.83px;
+                    border: none;
+                    background-color: #0000;
+
+                    &:hover {
+                        color: var(--nero);
+                        font-size: 17px;
+                    }
+                }
+            }
+        }
+
+        .accedi {
+            padding-bottom: 67px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            display: none;
+
+            &.attivato {
+                display: block;
+            }
+
+            .modulo {
+                display: flex;
+                height: calc(100% - 122px);
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                flex-direction: column;
+
+                .inputContenitore {
+                    width: 100%;
+                    margin-bottom: 15px;
+
+                    span {
+                        font-weight: 400;
+                        font-size: 15px;
+                        color: var(--beige);
+                        display: block;
+                        margin-bottom: 15px;
+                        text-align: center;
+                    }
+
+                    input {
+                        background-color: #FCF3E61A;
+                        border-radius: 20px;
+                        border: none;
+                        padding: 16px 52px 16px 52px;
+                        width: 100%;
+                        font-weight: 400;
+                        font-size: 18px;
+                        line-height: 23.44px;
+                        color: var(--beige);
+                        text-align: center;
+                        caret-color: var(--roso);
+
+                        &::placeholder {
+                            font-weight: 400;
+                            font-size: 18px;
+                            line-height: 23.44px;
+                            color: #FCF3E680;
+                            text-align: center;
+                        }
+
+                        &:focus, &:focus-visible{
+                            outline: none;
+                        }
+                    }
+                }
+
+                .passwordDimenticata{
+                    margin-top: 15px;
+                    font-weight: 400;
+                    font-size: 15px;
+                    line-height: 19.53px;
+                    color: #FCF3E699;
+
+                    .clicca{
+                        color: var(--roso);
+                        cursor: pointer;
+                    }
+                }
+
+            }
+
+            .azioni {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 8px;
+                min-height: 122px;
+            }
+        }
+
+    }
+}
+
+@keyframes animazioneSpettacolo {
     0% {
         opacity: 0;
     }

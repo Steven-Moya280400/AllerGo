@@ -1,9 +1,11 @@
 :root {
   --beige: #FCF3E6;
   --nero: #000;
+  --roso: #F20815;
+  --bianco: #fff;
 }
 * {
-  font-family: "Lexend", sans-serif;
+  font-family: 'DM Sans';
   vertical-align: baseline;
   text-decoration: none;
   -webkit-box-sizing: border-box;
@@ -24,21 +26,54 @@
 .pulsante {
   min-width: 254px;
   border-radius: 20px;
-  line-height: 55px;
   display: block;
   text-align: center;
   width: fit-content;
   margin: 0 auto;
+  border: none;
+  font-weight: 400;
+  font-size: 18px;
+  padding: 17px;
+}
+.pulsante:focus,
+.pulsante:focus-visible {
+  outline: none;
 }
 .pulsante.neroBeige {
   background-color: var(--nero);
   color: var(--beige);
+}
+.pulsante.roso {
+  background-color: var(--roso);
+  color: var(--beige);
+}
+.pulsante.roso:hover {
+  background-color: var(--nero);
+  color: var(--roso);
+  font-weight: 600;
+  font-size: 19px;
+}
+.pulsante.beige {
+  background-color: var(--beige);
+  color: var(--nero);
+}
+.pulsante.beige:hover {
+  background-color: var(--roso);
+  color: var(--beige);
+  font-weight: 600;
+  font-size: 19px;
 }
 body {
   margin: 0;
   padding: 0;
 }
 body.beige {
+  background-color: var(--beige);
+}
+body.nero {
+  background-color: var(--nero);
+}
+body.nero .bar {
   background-color: var(--beige);
 }
 .logoAnimazione {
@@ -61,7 +96,7 @@ body.beige {
 }
 .inizio.mostrare {
   opacity: 1;
-  animation: animazioneInizio;
+  animation: animazioneSpettacolo;
   animation-duration: 1s;
 }
 .inizio .animazione {
@@ -83,7 +118,165 @@ body.beige {
   left: 50%;
   transform: translate(-50%);
 }
-@keyframes animazioneInizio {
+.inizioSessione {
+  display: none;
+  opacity: 0;
+}
+.inizioSessione.attivato {
+  display: block;
+}
+.inizioSessione.mostrare {
+  opacity: 1;
+  animation: animazioneSpettacolo;
+  animation-duration: 1s;
+}
+.inizioSessione .inizioSessioneContenuto {
+  display: grid;
+  grid-template-rows: 69px 69px 1fr;
+  height: 100vh;
+  width: 100%;
+}
+.inizioSessione .inizioSessioneContenuto .ritorno {
+  margin: 30px 22px 17px 22px;
+  background-color: #0000;
+  border: none;
+  width: 11px;
+  height: 22px;
+  padding: 0;
+  cursor: pointer;
+}
+.inizioSessione .inizioSessioneContenuto .ritorno .icon {
+  color: var(--beige);
+  object-fit: contain;
+  width: 11px;
+  height: 22px;
+}
+.inizioSessione .inizioSessioneContenuto .logo {
+  display: block;
+  margin: 0 auto;
+}
+.inizioSessione .inizioSessioneContenuto .benvenuto {
+  padding-bottom: 67px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  display: none;
+}
+.inizioSessione .inizioSessioneContenuto .benvenuto.attivato {
+  display: flex;
+}
+.inizioSessione .inizioSessioneContenuto .benvenuto .informazioni {
+  display: flex;
+  height: calc(100% - 122px);
+  align-items: center;
+  justify-content: center;
+}
+.inizioSessione .inizioSessioneContenuto .benvenuto .informazioni .testo {
+  font-size: 24px;
+  line-height: 31.25px;
+  text-align: center;
+  font-weight: 700;
+}
+.inizioSessione .inizioSessioneContenuto .benvenuto .azioni {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  min-height: 122px;
+}
+.inizioSessione .inizioSessioneContenuto .benvenuto .azioni .testoCreaAccount {
+  color: #00000073;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20.83px;
+  margin-top: 3px;
+}
+.inizioSessione .inizioSessioneContenuto .benvenuto .azioni .registrati {
+  color: var(--roso);
+  display: block;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 20.83px;
+  border: none;
+  background-color: #0000;
+}
+.inizioSessione .inizioSessioneContenuto .benvenuto .azioni .registrati:hover {
+  color: var(--nero);
+  font-size: 17px;
+}
+.inizioSessione .inizioSessioneContenuto .accedi {
+  padding-bottom: 67px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  display: none;
+}
+.inizioSessione .inizioSessioneContenuto .accedi.attivato {
+  display: block;
+}
+.inizioSessione .inizioSessioneContenuto .accedi .modulo {
+  display: flex;
+  height: calc(100% - 122px);
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+}
+.inizioSessione .inizioSessioneContenuto .accedi .modulo .inputContenitore {
+  width: 100%;
+  margin-bottom: 15px;
+}
+.inizioSessione .inizioSessioneContenuto .accedi .modulo .inputContenitore span {
+  font-weight: 400;
+  font-size: 15px;
+  color: var(--beige);
+  display: block;
+  margin-bottom: 15px;
+  text-align: center;
+}
+.inizioSessione .inizioSessioneContenuto .accedi .modulo .inputContenitore input {
+  background-color: #FCF3E61A;
+  border-radius: 20px;
+  border: none;
+  padding: 16px 52px 16px 52px;
+  width: 100%;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23.44px;
+  color: var(--beige);
+  text-align: center;
+  caret-color: var(--roso);
+}
+.inizioSessione .inizioSessioneContenuto .accedi .modulo .inputContenitore input::placeholder {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23.44px;
+  color: #FCF3E680;
+  text-align: center;
+}
+.inizioSessione .inizioSessioneContenuto .accedi .modulo .inputContenitore input:focus,
+.inizioSessione .inizioSessioneContenuto .accedi .modulo .inputContenitore input:focus-visible {
+  outline: none;
+}
+.inizioSessione .inizioSessioneContenuto .accedi .modulo .passwordDimenticata {
+  margin-top: 15px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 19.53px;
+  color: #FCF3E699;
+}
+.inizioSessione .inizioSessioneContenuto .accedi .modulo .passwordDimenticata .clicca {
+  color: var(--roso);
+  cursor: pointer;
+}
+.inizioSessione .inizioSessioneContenuto .accedi .azioni {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  min-height: 122px;
+}
+@keyframes animazioneSpettacolo {
   0% {
     opacity: 0;
   }

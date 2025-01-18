@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'DM Sans';
+    src: url('../Fonts/DM_Sans/DMSans-VariableFont.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'DM Sans';
+    src: url('../Fonts/DM_Sans/DMSans-Italic-VariableFont.ttf') format('truetype');
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Blenny';
+    src: url('../Fonts/Blenny/TrialStaticFonts/Blenny_Trial_Blk.ttf') format('truetype');
+}
