@@ -31,9 +31,9 @@
                             </p>
                         </div>
                         <div class="azioni">
-                            <button class="pulsante roso" onclick="accedi()">Accedi</button>
+                            <button class="pulsante roso" onclick="mostrareAccedi()">Accedi</button>
                             <p class="testoCreaAccount">Crea ora il tuo account</p>
-                            <button class="pulsanteRegistrati" onclick="registrati()">Registrati</button>
+                            <button class="pulsanteRegistrati" onclick="mostrareRegistrati()">Registrati</button>
                         </div>
                     </div>
 
@@ -69,7 +69,7 @@
                                 <img class="icon" src="assets/img/icons/facebook.png">
                                 <span class="testoPulsante">Continua con Facebook</span>
                             </button>
-                            <button class="pulsanteRegistrazione">
+                            <button class="pulsanteRegistrazione" onclick="mostrareRegistratiEmail();">
                                 <svg class="icon email" width="30" height="23" viewBox="0 0 30 23" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <g clip-path="url(#clip0_50_762)">
@@ -88,7 +88,7 @@
                         </div>
                         <div class="azioni">
                             <p class="haiGiaAccount">Hai già un account? <span class="accediTesto"
-                                    onclick="accedi()">Accedi</span></p>
+                                    onclick="mostrareAccedi()">Accedi</span></p>
                         </div>
 
                         <div id="popUpGoogle" class="popUpGoogle">
@@ -98,6 +98,30 @@
                                 <button class="pulsantePopUp" onclick="nasconderePopUpGoogle();">Annula</button>
                                 <button class="pulsantePopUp" onclick="mostrareScegliAccountGoogle();">Continua</button>
                             </div>
+                        </div>
+                    </div>
+
+                    <div id="registratiEmail" class="accedi">
+                        <div class="modulo">
+                            <div class="inputContenitore">
+                                <span>Email</span>
+                                <input type="email" name="email" class="inputAccedi"
+                                    placeholder="Inserisci il tuo indirizzo email">
+                            </div>
+
+                            <div class="inputContenitore">
+                                <span>Nome</span>
+                                <input type="email" name="nome" class="inputAccedi" placeholder="Nome">
+                            </div>
+
+                            <div class="inputContenitore">
+                                <span>Password</span>
+                                <input type="password" name="password" class="inputAccedi"
+                                    placeholder="Inserisci la tua password">
+                            </div>
+                        </div>
+                        <div class="azioni">
+                            <button class="pulsante beige">Crea ora!</button>
                         </div>
                     </div>
 
@@ -195,13 +219,18 @@
                                 <img src="assets/svg/Arrow.svg">
                             </div>
                             <p class="privacy">
-                                Se continui, Google condividerà il tuo nome, il tuo indirizzo email, la tua preferenza della lingua e l’immagine del tuo profilo con AllerGo. Leggi le <span class="collegamento">norme sulla privacy</span> e i <span class="collegamento">termini di servizio</span> di AllerGo.
+                                Se continui, Google condividerà il tuo nome, il tuo indirizzo email, la tua preferenza
+                                della lingua e l’immagine del tuo profilo con AllerGo. Leggi le <span
+                                    class="collegamento">norme sulla privacy</span> e i <span
+                                    class="collegamento">termini di servizio</span> di AllerGo.
                                 <br>
                                 <br>
-                                Puoi gestire le funzionalità Accedi con Google nel tuo <span class="collegamento">Account Google</span>.
+                                Puoi gestire le funzionalità Accedi con Google nel tuo <span
+                                    class="collegamento">Account Google</span>.
                             </p>
                             <div class="azioniGoogle">
-                                <button class="pulsanteGoogleAccount" onclick="annulaAccediAccountGoogle();">Annula</button>
+                                <button class="pulsanteGoogleAccount"
+                                    onclick="annulaAccediAccountGoogle();">Annula</button>
                                 <a class="pulsanteGoogleAccount">Continua</button>
                             </div>
                         </div>
@@ -233,81 +262,8 @@
             <div class="bar"></div>
         </section>
     </main>
-    <script>
-        function accedi() {
-            document.getElementById('body').classList.add('nero');
-            document.getElementById('benvenuto').classList.remove('attivato');
-            document.getElementById('accedi').classList.add('attivato');
-            document.getElementById('registrati').classList.remove('attivato');
-        }
 
-        function registrati() {
-            document.getElementById('body').classList.add('nero');
-            document.getElementById('benvenuto').classList.remove('attivato');
-            document.getElementById('accedi').classList.remove('attivato');
-            document.getElementById('registrati').classList.add('attivato');
-        }
-
-        function ritorno() {
-            document.getElementById('body').classList.remove('nero');
-            document.getElementById('accedi').classList.remove('attivato');
-            document.getElementById('registrati').classList.remove('attivato');
-            document.getElementById('benvenuto').classList.add('attivato');
-        }
-
-        function mostrarePopUpGoogle() {
-            document.getElementById("popUpGoogle").classList.add("attivato");
-            setTimeout(function () {
-                document.getElementById("popUpGoogle").classList.add("mostrare");
-            }, 100);
-        }
-
-        function nasconderePopUpGoogle() {
-            document.getElementById("popUpGoogle").classList.add("nascondere");
-            setTimeout(function () {
-                document.getElementById("popUpGoogle").classList.remove("mostrare");
-                document.getElementById("popUpGoogle").classList.remove("attivato");
-                document.getElementById("popUpGoogle").classList.remove("nascondere");
-
-            }, 500);
-        }
-
-        function mostrareScegliAccountGoogle(){
-            document.getElementById("scegliAccountGoogle").classList.add("mostrare");
-            document.getElementById("popUpGoogle").classList.remove("mostrare");
-            document.getElementById("popUpGoogle").classList.remove("attivato");
-        }
-        
-        function nasconderecegliAccountGoogle(){
-            document.getElementById("scegliAccountGoogle").classList.add("nascondere");
-            setTimeout(function () {
-                document.getElementById("scegliAccountGoogle").classList.remove("mostrare");
-                document.getElementById("scegliAccountGoogle").classList.remove("nascondere");
-            }, 500);
-        }
-
-        function mostrareAccediAccountGoogle(){
-            document.getElementById("accediAccountGoogle").classList.add("mostrare");
-        }
-
-        function nascondereAccediAccountGoogle(){
-            document.getElementById("accediAccountGoogle").classList.add("nascondere");
-            setTimeout(function () {
-                document.getElementById("accediAccountGoogle").classList.remove("mostrare");
-                document.getElementById("accediAccountGoogle").classList.remove("nascondere");
-            }, 500);
-        }
-
-        function annulaAccediAccountGoogle(){
-            document.getElementById("scegliAccountGoogle").classList.remove("mostrare");
-            document.getElementById("scegliAccountGoogle").classList.remove("nascondere");
-            document.getElementById("accediAccountGoogle").classList.add("annula");
-            setTimeout(function () {
-                document.getElementById("accediAccountGoogle").classList.remove("mostrare");
-                document.getElementById("accediAccountGoogle").classList.remove("annula");
-            }, 500);
-        }
-    </script>
+    <script src="assets/js/inizioSessione.js"></script>
 </body>
 
 </html>
