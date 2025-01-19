@@ -1,0 +1,129 @@
+.intro .diapositiva {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--beige);
+}
+.intro .diapositiva .bar {
+  position: absolute;
+}
+.intro .diapositiva .gif {
+  max-width: 100%;
+  width: 100vw;
+  height: calc(100vh - 260px);
+  object-fit: contain;
+  object-position: right;
+}
+.intro .diapositiva .informazioniContenuto .titolo {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 39.06px;
+  color: var(--nero);
+  margin-bottom: 15px;
+}
+.intro .diapositiva .informazioniContenuto .informazioni {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 19.53px;
+  color: var(--nero);
+  max-width: 262px;
+  margin-bottom: 50px;
+  color: #00000099;
+}
+.intro .diapositiva .informazioniContenuto .nav {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.intro .diapositiva .informazioniContenuto .nav .azione {
+  display: flex;
+  border: none;
+  background-color: #0000;
+  padding: 0;
+  gap: 15px;
+  align-items: center;
+}
+.intro .diapositiva .informazioniContenuto .nav .azione .testoAzione {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 19.53px;
+  color: var(--nero);
+  transition: 0.3s;
+}
+.intro .diapositiva .informazioniContenuto .nav .azione .icon {
+  width: 8.34px;
+  height: 16.33px;
+  color: var(--nero);
+  transition: 0.3s;
+}
+.intro .diapositiva .informazioniContenuto .nav .azione:hover .testoAzione,
+.intro .diapositiva .informazioniContenuto .nav .azione:hover .icon {
+  color: var(--roso);
+}
+.intro .diapositiva.personalizza {
+  background-color: var(--nero);
+  left: 100vw;
+  z-index: 20;
+}
+.intro .diapositiva.personalizza.mostrare {
+  left: 0;
+  animation: animazioneMostrareDiapositiva;
+  animation-duration: 1s;
+}
+.intro .diapositiva.personalizza.nascondere {
+  left: 100vw;
+  animation: animazioneNascondereDiapositiva;
+  animation-duration: 1s;
+}
+.intro .diapositiva.personalizza .gif {
+  object-position: center;
+}
+.intro .diapositiva.personalizza .informazioniContenuto .titolo {
+  color: var(--beige);
+}
+.intro .diapositiva.personalizza .informazioniContenuto .informazioni {
+  color: #FCF3E699;
+}
+.intro .diapositiva.personalizza .nav .azione .testoAzione {
+  color: var(--beige);
+}
+.intro .diapositiva.personalizza .nav .azione .icon {
+  color: var(--beige);
+}
+.intro .diapositiva.personalizza .bar {
+  background-color: var(--beige);
+}
+.intro .diapositiva.esplora {
+  left: 100vw;
+  z-index: 30;
+}
+.intro .diapositiva.esplora.mostrare {
+  left: 0;
+  animation: animazioneMostrareDiapositiva;
+  animation-duration: 1s;
+}
+.intro .diapositiva.esplora.nascondere {
+  left: 100vw;
+  animation: animazioneNascondereDiapositiva;
+  animation-duration: 1s;
+}
+.intro .diapositiva.esplora .gif {
+  object-position: center;
+}
+@keyframes animazioneMostrareDiapositiva {
+  0% {
+    left: 100vw;
+  }
+  100% {
+    left: 0;
+  }
+}
+@keyframes animazioneNascondereDiapositiva {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 100vw;
+  }
+}

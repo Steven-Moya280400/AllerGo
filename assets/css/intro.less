@@ -1,0 +1,167 @@
+.intro {
+    .diapositiva {
+        position: fixed;
+        height: 100vh;
+        width: 100vw;
+        background-color: var(--beige);
+
+        .bar {
+            position: absolute;
+        }
+
+        .gif {
+            max-width: 100%;
+            width: 100vw;
+            height: calc(100vh - 260px);
+            object-fit: contain;
+            object-position: right;
+        }
+
+        .informazioniContenuto {
+            .titolo {
+                font-weight: 700;
+                font-size: 30px;
+                line-height: 39.06px;
+                color: var(--nero);
+                margin-bottom: 15px;
+            }
+
+            .informazioni {
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 19.53px;
+                color: var(--nero);
+                max-width: 262px;
+                margin-bottom: 50px;
+                color: #00000099;
+            }
+
+
+            .nav {
+                display: inline-flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+
+                .azione {
+                    display: flex;
+                    border: none;
+                    background-color: #0000;
+                    padding: 0;
+                    gap: 15px;
+                    align-items: center;
+
+                    .testoAzione {
+                        font-weight: 400;
+                        font-size: 15px;
+                        line-height: 19.53px;
+                        color: var(--nero);
+                        transition: 0.3s;
+                    }
+
+                    .icon {
+                        width: 8.34px;
+                        height: 16.33px;
+                        color: var(--nero);
+                        transition: 0.3s;
+                    }
+
+                    &:hover {
+                        .testoAzione, .icon  {
+                            color: var(--roso);
+                        }
+                    }
+                }
+            }
+        }
+
+        &.personalizza {
+            background-color: var(--nero);
+            left: 100vw;
+            z-index: 20;
+
+            &.mostrare {
+                left: 0;
+                animation: animazioneMostrareDiapositiva;
+                animation-duration: 1s;
+            }
+
+            &.nascondere {
+                left: 100vw;
+                animation: animazioneNascondereDiapositiva;
+                animation-duration: 1s;
+            }
+
+            .gif {
+                object-position: center;
+            }
+
+            .informazioniContenuto {
+                .titolo {
+                    color: var(--beige);
+                }
+
+                .informazioni {
+                    color: #FCF3E699;
+                }
+            }
+
+            .nav {
+                .azione {
+                    .testoAzione {
+                        color: var(--beige);
+                    }
+
+                    .icon {
+                        color: var(--beige);
+                    }
+                }
+            }
+
+            .bar {
+                background-color: var(--beige);
+            }
+        }
+
+        &.esplora {
+            left: 100vw;
+            z-index: 30;
+
+            &.mostrare {
+                left: 0;
+                animation: animazioneMostrareDiapositiva;
+                animation-duration: 1s;
+            }
+
+            &.nascondere {
+                left: 100vw;
+                animation: animazioneNascondereDiapositiva;
+                animation-duration: 1s;
+            }
+
+            .gif {
+                object-position: center;
+            }
+        }
+    }
+}
+
+@keyframes animazioneMostrareDiapositiva {
+    0% {
+        left: 100vw;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes animazioneNascondereDiapositiva {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: 100vw;
+    }
+}

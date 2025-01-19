@@ -23,6 +23,11 @@
   width: 100%;
   padding: 0 16px;
 }
+.contenitoreM {
+  max-width: 100%;
+  width: 100%;
+  padding: 0 38px;
+}
 .pulsante {
   min-width: 254px;
   border-radius: 20px;
@@ -95,6 +100,7 @@ body.nero .inizioSessione .inizioSessioneContenuto .ritorno .icon {
 .inizio {
   display: none;
   opacity: 0;
+  transition: 0.3s;
 }
 .inizio.attivato {
   display: block;
