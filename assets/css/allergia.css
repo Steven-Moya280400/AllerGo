@@ -31,13 +31,24 @@
   animation-duration: 1s;
 }
 .allergia .diapositiva .contenutoDiapositiva {
-  display: flex;
   justify-content: center;
   width: 100%;
-  height: calc(100vh - 180px);
-  flex-direction: column;
-  align-items: center;
+  height: calc(100vh - 70px);
   position: relative;
+  align-items: center;
+  display: grid;
+  grid-template-rows: 116px 1fr;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+.allergia .diapositiva .contenutoDiapositiva::-webkit-scrollbar {
+  display: none;
+}
+.allergia .diapositiva .contenutoDiapositiva.unaColonna {
+  grid-template-rows: 1fr;
 }
 .allergia .diapositiva .contenutoDiapositiva .menuAllergia.nascondere {
   display: none;
@@ -86,8 +97,9 @@
   outline: none;
 }
 .allergia .diapositiva .contenutoDiapositiva .trovaAllergiaContenuto {
-  position: absolute;
-  top: 23px;
+  position: relative;
+  margin-top: 23px;
+  margin-bottom: 38px;
   width: 100%;
 }
 .allergia .diapositiva .contenutoDiapositiva .trovaAllergiaContenuto .trovaIcon {
@@ -103,14 +115,14 @@
   border: none;
   font-weight: 400;
   font-size: 18px;
-  line-height: 23.44px;
+  line-height: 20px;
   color: var(--beige);
   caret-color: var(--roso);
 }
 .allergia .diapositiva .contenutoDiapositiva .trovaAllergiaContenuto .trova::placeholder {
   font-weight: 400;
   font-size: 18px;
-  line-height: 23.44px;
+  line-height: 20px;
   color: #FCF3E680;
 }
 .allergia .diapositiva .contenutoDiapositiva .trovaAllergiaContenuto .trova:focus,
@@ -131,7 +143,8 @@
   grid-template-columns: 1fr 1fr 1fr;
   width: 100%;
   justify-items: center;
-  gap: 20.2px 45.8px;
+  gap: 20.2px;
+  margin-bottom: 15px;
 }
 .allergia .diapositiva .contenutoDiapositiva .allergiaContenuto {
   position: relative;
@@ -167,7 +180,7 @@
   right: -15px;
 }
 .allergia .diapositiva .contenutoDiapositiva .allergiaSelezionata {
-  margin: 38px 0 32.8px 0;
+  margin: 0 0 32.8px 0;
   width: 100%;
   justify-content: flex-start;
   display: none;
