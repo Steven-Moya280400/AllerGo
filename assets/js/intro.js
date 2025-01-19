@@ -1,29 +1,30 @@
+const scannerizza = document.getElementById('scannerizza');
 const personalizza = document.getElementById('personalizza');
 const esplora = document.getElementById('esplora');
 
-function avantiDiapositiva(diapositiva){
-    if(diapositiva=="personalizza"){
-        personalizza.classList.add('mostrare');
+function avantiDiapositiva(diapositiva) {
+    if (diapositiva == "personalizza") {
+        scannerizza.classList.add('nascondere');
     }
-    else if(diapositiva=="esplora"){
-        esplora.classList.add('mostrare');
+    else if (diapositiva == "esplora") {
+        personalizza.classList.add('nascondere');
     }
-    
+
 }
 
-function indietroDiapositiva(diapositiva){
-    if(diapositiva=="personalizza"){
-        personalizza.classList.add('nascondere');
+function indietroDiapositiva(diapositiva) {
+    if (diapositiva == "personalizza") {
+        scannerizza.classList.add('mostrare');
         setTimeout(function () {
-            personalizza.classList.remove("mostrare");
-            personalizza.classList.remove("nascondere");
+            scannerizza.classList.remove("nascondere");
+            scannerizza.classList.remove("mostrare");
         }, 1000);
     }
-    else if(diapositiva=="esplora"){
-        esplora.classList.add('nascondere');
+    else if (diapositiva == "esplora") {
+        personalizza.classList.add('mostrare');
         setTimeout(function () {
-            esplora.classList.remove("mostrare");
-            esplora.classList.remove("nascondere");
+            personalizza.classList.remove("nascondere");
+            personalizza.classList.remove("mostrare");
         }, 1000);
     }
 }

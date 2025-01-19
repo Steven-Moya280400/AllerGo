@@ -75,20 +75,35 @@
             }
         }
 
-        &.personalizza {
-            background-color: var(--nero);
-            left: 100vw;
-            z-index: 20;
+        &.scannerizza{
+            z-index: 30;
+
+            &.nascondere {
+                left: -100vw;
+                animation: animazioneNascondereDiapositiva;
+                animation-duration: 1s;
+            }
 
             &.mostrare {
                 left: 0;
                 animation: animazioneMostrareDiapositiva;
                 animation-duration: 1s;
             }
+        }
+
+        &.personalizza {
+            background-color: var(--nero);
+            z-index: 20;
 
             &.nascondere {
-                left: 100vw;
+                left: -100vw;
                 animation: animazioneNascondereDiapositiva;
+                animation-duration: 1s;
+            }
+
+            &.mostrare {
+                left: 0;
+                animation: animazioneMostrareDiapositiva;
                 animation-duration: 1s;
             }
 
@@ -124,18 +139,17 @@
         }
 
         &.esplora {
-            left: 100vw;
-            z-index: 30;
+            z-index: 10;
+
+            &.nascondere {
+                left: -100vw;
+                animation: animazioneNascondereDiapositiva;
+                animation-duration: 1s;
+            }
 
             &.mostrare {
                 left: 0;
                 animation: animazioneMostrareDiapositiva;
-                animation-duration: 1s;
-            }
-
-            &.nascondere {
-                left: 100vw;
-                animation: animazioneNascondereDiapositiva;
                 animation-duration: 1s;
             }
 
@@ -148,7 +162,7 @@
 
 @keyframes animazioneMostrareDiapositiva {
     0% {
-        left: 100vw;
+        left: -100vw;
     }
 
     100% {
@@ -162,6 +176,6 @@
     }
 
     100% {
-        left: 100vw;
+        left: -100vw;
     }
 }
