@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
     <link href="assets/css/fonts.css" rel="stylesheet">
     <link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/css/inizioSessione.css" rel="stylesheet">
 </head>
 
 <body id="body" class="beige">
@@ -15,7 +16,7 @@
         <section class="inizioSessione attivato mostrare">
             <div class="contenitore">
                 <div class="inizioSessioneContenuto">
-                    <button class="ritorno" onclick="ritorno();">
+                    <button id="ritorno" class="ritorno nascondere" onclick="ritorno();">
                         <svg class="icon" viewBox="0 0 11 22" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M3.50765 12.1163C3.36392 11.9702 3.24984 11.7964 3.17198 11.6049C3.09413 11.4134 3.05405 11.208 3.05405 11.0006C3.05405 10.7932 3.09413 10.5878 3.17198 10.3963C3.24984 10.2048 3.36392 10.031 3.50765 9.88496L10.5464 2.68823C10.6901 2.54216 10.8042 2.36837 10.8821 2.17688C10.9599 1.9854 11 1.78002 11 1.57258C11 1.36515 10.9599 1.15977 10.8821 0.968283C10.8042 0.776801 10.6901 0.603009 10.5464 0.456933C10.2591 0.16427 9.87041 0 9.46528 0C9.06015 0 8.67149 0.16427 8.38417 0.456933L1.34543 7.66937C0.483906 8.55325 0 9.75139 0 11.0006C0 12.2498 0.483906 13.448 1.34543 14.3318L8.38417 21.5443C8.6698 21.8346 9.05532 21.9982 9.45761 22C9.65943 22.0012 9.8595 21.9615 10.0463 21.8833C10.2332 21.8051 10.4031 21.6899 10.5464 21.5443C10.6901 21.3982 10.8042 21.2244 10.8821 21.0329C10.9599 20.8415 11 20.6361 11 20.4286C11 20.2212 10.9599 20.0158 10.8821 19.8243C10.8042 19.6329 10.6901 19.4591 10.5464 19.313L3.50765 12.1163Z"
@@ -51,8 +52,8 @@
                                     placeholder="Inserisci la tua password">
                             </div>
 
-                            <p class="passwordDimenticata">Password dimenticata? <span class="clicca">Clicca qui.</span>
-                            </p>
+                            <p class="passwordDimenticataTesto">Password dimenticata? <span class="clicca"
+                                    onclick="mostrarePasswordDimenticata();">Clicca qui.</span></p>
                         </div>
                         <div class="azioni">
                             <button class="pulsante beige">Accedi</button>
@@ -122,6 +123,22 @@
                         </div>
                         <div class="azioni">
                             <button class="pulsante beige">Crea ora!</button>
+                        </div>
+                    </div>
+
+                    <div id="passwordDimenticata" class="passwordDimenticata">
+                        <div class="modulo">
+                            <div class="inputContenitore">
+                                <span>Email</span>
+                                <input type="email" name="email" class="inputAccedi"
+                                    placeholder="Inserisci il tuo indirizzo email">
+                            </div>
+                            <p class="didascalia">Inserisci qui il tuo indirizzo email
+                                <br>per recuperare la password.
+                            </p>
+                        </div>
+                        <div class="azioni">
+                            <button class="pulsante roso">Crea ora!</button>
                         </div>
                     </div>
 

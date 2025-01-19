@@ -6,12 +6,34 @@ const popUpGoogle = document.getElementById('popUpGoogle');
 const scegliAccountGoogle = document.getElementById('scegliAccountGoogle');
 const registratiEmail = document.getElementById('registratiEmail');
 const accediAccountGoogle = document.getElementById('accediAccountGoogle');
+const ritornoPulsante = document.getElementById('ritorno');
+const passwordDimenticata = document.getElementById('passwordDimenticata');
+
+function ritorno() {
+    if (registratiEmail.classList.contains('attivato')) {
+        registratiEmail.classList.remove('attivato')
+        registrati.classList.add('attivato');
+    }
+    else if (passwordDimenticata.classList.contains('attivato')) {
+        passwordDimenticata.classList.remove('attivato')
+        body.classList.add('nero');
+        accedi.classList.add('attivato');
+    }
+    else {
+        body.classList.remove('nero');
+        accedi.classList.remove('attivato');
+        registrati.classList.remove('attivato');
+        benvenuto.classList.add('attivato');
+        ritornoPulsante.classList.add('nascondere');
+    }
+}
 
 function mostrareAccedi() {
     body.classList.add('nero');
     benvenuto.classList.remove('attivato');
     accedi.classList.add('attivato');
     registrati.classList.remove('attivato');
+    ritornoPulsante.classList.remove('nascondere');
 }
 
 function mostrareRegistrati() {
@@ -19,6 +41,7 @@ function mostrareRegistrati() {
     benvenuto.classList.remove('attivato');
     accedi.classList.remove('attivato');
     registrati.classList.add('attivato');
+    ritornoPulsante.classList.remove('nascondere');
 }
 
 function mostrareRegistratiEmail() {
@@ -26,17 +49,10 @@ function mostrareRegistratiEmail() {
     registratiEmail.classList.add('attivato');
 }
 
-function ritorno() {
-    if (registratiEmail.classList.contains('attivato')) {
-        registratiEmail.classList.remove('attivato')
-        registratiEmail.classList.add('attivato');
-    }
-    else {
-        body.classList.remove('nero');
-        accedi.classList.remove('attivato');
-        registrati.classList.remove('attivato');
-        benvenuto.classList.add('attivato');
-    }
+function mostrarePasswordDimenticata() {
+    body.classList.remove('nero');
+    accedi.classList.remove('attivato');
+    passwordDimenticata.classList.add('attivato');
 }
 
 function mostrarePopUpGoogle() {

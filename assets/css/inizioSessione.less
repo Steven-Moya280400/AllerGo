@@ -1,0 +1,837 @@
+.inizioSessione {
+    display: none;
+    opacity: 0;
+
+    &.attivato {
+        display: block;
+    }
+
+    &.mostrare {
+        opacity: 1;
+        animation: animazioneSpettacolo;
+        animation-duration: 1s;
+    }
+
+    .inizioSessioneContenuto {
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        grid-template-rows: 69px 69px 1fr;
+        height: 100vh;
+        width: 100%;
+
+        .ritorno {
+            margin: 30px 22px 17px 22px;
+            background-color: #0000;
+            border: none;
+            width: 11px;
+            height: 22px;
+            padding: 0;
+            cursor: pointer;
+
+            &.nascondere{
+                opacity: 0;
+                pointer-events: none;
+            }
+
+            .icon {
+                color: var(--nero);
+                object-fit: contain;
+                width: 11px;
+                height: 22px;
+                transition: 0.3s;
+            }
+
+            &:hover{
+                .icon{
+                    color: var(--roso);
+                }
+            }
+        }
+
+        .logo {
+            display: block;
+            margin: 0 auto;
+        }
+
+        .benvenuto {
+            padding-bottom: 67px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            display: none;
+
+            &.attivato {
+                display: flex;
+            }
+
+            .informazioni {
+                display: flex;
+                height: calc(100% - 122px);
+                align-items: center;
+                justify-content: center;
+
+                .testo {
+                    font-size: 24px;
+                    line-height: 31.25px;
+                    text-align: center;
+                    font-weight: 700;
+                }
+            }
+
+            .azioni {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 8px;
+                min-height: 122px;
+
+                .testoCreaAccount {
+                    color: #00000073;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 20.83px;
+                    margin-top: 3px;
+                }
+
+                .pulsanteRegistrati {
+                    color: var(--roso);
+                    display: block;
+                    font-size: 16px;
+                    font-weight: 800;
+                    line-height: 20.83px;
+                    border: none;
+                    background-color: #0000;
+                    transition: 0.3s;
+
+                    &:hover {
+                        color: var(--nero);
+                        font-size: 17px;
+                    }
+                }
+            }
+        }
+
+        .accedi {
+            padding-bottom: 67px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            display: none;
+
+            &.attivato {
+                display: block;
+            }
+
+            .modulo {
+                display: flex;
+                height: calc(100% - 122px);
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                flex-direction: column;
+
+                .inputContenitore {
+                    width: 100%;
+                    margin-bottom: 15px;
+
+                    span {
+                        font-weight: 400;
+                        font-size: 15px;
+                        color: var(--beige);
+                        display: block;
+                        margin-bottom: 15px;
+                        text-align: center;
+                    }
+
+                    input {
+                        background-color: #FCF3E61A;
+                        border-radius: 20px;
+                        border: none;
+                        padding: 16px 52px 16px 52px;
+                        width: 100%;
+                        font-weight: 400;
+                        font-size: 18px;
+                        line-height: 23.44px;
+                        color: var(--beige);
+                        text-align: center;
+                        caret-color: var(--roso);
+                        transition: 0.3s;
+
+                        &::placeholder {
+                            font-weight: 400;
+                            font-size: 18px;
+                            line-height: 23.44px;
+                            color: #FCF3E680;
+                            text-align: center;
+                        }
+
+                        &:focus,
+                        &:focus-visible {
+                            outline: none;
+                        }
+                    }
+                }
+
+                .passwordDimenticataTesto {
+                    margin-top: 15px;
+                    font-weight: 400;
+                    font-size: 15px;
+                    line-height: 19.53px;
+                    color: #FCF3E699;
+
+                    .clicca {
+                        color: var(--roso);
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .azioni {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 8px;
+                min-height: 122px;
+            }
+        }
+
+        .registrati {
+            padding-bottom: 67px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            display: none;
+
+            &.attivato {
+                display: block;
+            }
+
+            .modalitaRegistrazione {
+                display: flex;
+                height: calc(100% - 122px);
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                flex-direction: column;
+
+                .pulsanteRegistrazione {
+                    background-color: #FCF3E61A;
+                    border: none;
+                    padding: 16px;
+                    display: flex;
+                    width: 100%;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 20px;
+                    margin-bottom: 30px;
+                    border-radius: 20px;
+                    transition: 0.3s;
+
+                    &:focus,
+                    &:focus-visible {
+                        outline: none;
+                    }
+
+                    &:hover {
+                        background-color: var(--beige);
+
+                        .icon {
+                            &.email {
+                                color: var(--nero);
+                            }
+                        }
+
+                        .testoPulsante {
+                            color: var(--nero);
+                        }
+                    }
+
+                    .icon {
+                        transition: none;
+
+                        &.email {
+                            color: var(--beige);
+                        }
+                    }
+
+                    .testoPulsante {
+                        font-weight: 400;
+                        font-size: 18px;
+                        line-height: 20px;
+                        color: var(--beige);
+                    }
+                }
+            }
+
+            .azioni {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 8px;
+                min-height: 122px;
+
+                .haiGiaAccount {
+                    margin-top: 15px;
+                    font-weight: 400;
+                    font-size: 15px;
+                    line-height: 19.53px;
+                    color: #FCF3E699;
+
+                    .accediTesto {
+                        color: var(--roso);
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .popUpGoogle {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 234px;
+                background-color: #434445;
+                padding: 19px 0 0 0;
+                border-radius: 15px;
+                overflow: hidden;
+                display: none;
+                opacity: 0;
+
+                &.attivato {
+                    display: block;
+                }
+
+                &.mostrare {
+                    opacity: 1;
+                    animation: animazioneSpettacolo;
+                    animation-duration: 0.5s;
+                }
+
+                &.nascondere {
+                    opacity: 0;
+                    animation: animazioneNascondere;
+                    animation-duration: 0.5s;
+                }
+
+                .titolo {
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 22px;
+                    color: var(--bianco);
+                    text-align: center;
+                    letter-spacing: -0.41px;
+                    margin-bottom: 2px;
+                    padding: 0 16px;
+                }
+
+                .sottotitolo {
+                    font-weight: 400;
+                    font-size: 13px;
+                    line-height: 22px;
+                    color: #FFFFFF80;
+                    text-align: center;
+                    letter-spacing: -0.8px;
+                    padding: 0 16px;
+                    margin-bottom: 17px;
+                }
+
+                .azioniPopUp {
+                    display: inline-flex;
+                    width: 100%;
+                    justify-content: center;
+                    border-top: 1px solid #FFFFFF4D;
+
+                    .pulsantePopUp {
+                        width: 50%;
+                        border: none;
+                        background-color: #0000;
+                        color: #0A84FF;
+                        font-weight: 400;
+                        font-size: 17px;
+                        line-height: 22px;
+                        letter-spacing: -0.41px;
+                        padding: 11px;
+                    }
+                }
+            }
+        }
+
+        .google {
+            width: 100%;
+            height: 100vh;
+            background-color: var(--bianco);
+            position: fixed;
+
+            &.scegliAccountGoogle {
+                left: 0;
+                top: 100vh;
+                z-index: 10;
+
+                &.mostrare {
+                    top: 0;
+                    animation: animazioneMostrareScegliAccountGoogle;
+                    animation-duration: 0.5s;
+                }
+
+                &.nascondere {
+                    top: 100vh;
+                    animation: animazioneNascondereScegliAccountGoogle;
+                    animation-duration: 0.5s;
+                }
+            }
+
+            &.accediAccountGoogle {
+                left: 100vw;
+                top: 0;
+                z-index: 10;
+
+                &.mostrare {
+                    left: 0;
+                    animation: animazioneMostrareAccediAccountGoogle;
+                    animation-duration: 0.5s;
+                }
+
+                &.nascondere {
+                    left: 100vw;
+                    animation: animazioneNascondereAccediAccountGoogle;
+                    animation-duration: 0.5s;
+                }
+
+                &.annula {
+                    top: 100vh;
+                    animation: animazioneAnnulaAccediAccountGoogle;
+                    animation-duration: 0.5s;
+                }
+            }
+
+
+            .headerGoogle {
+                background-color: #F1F1F1;
+                display: inline-flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                padding: 13px 16px;
+                border-bottom: 1px solid #C1C1C180;
+
+                .pulsanteGoogle {
+                    background-color: #0000;
+                    color: var(--bluGoogle);
+                    font-size: 16px;
+                    line-height: 20px;
+                    padding: 0;
+                    border: none;
+                    align-items: center;
+                }
+
+                .urlGoogle {
+                    display: flex;
+                    align-items: center;
+                    gap: 3.5px;
+
+                    p {
+                        font-weight: 500;
+                        font-size: 16px;
+                        line-height: 19.09px;
+                    }
+                }
+
+                .iconsGoogle {
+                    display: flex;
+                    align-items: center;
+                    gap: 29px;
+                }
+            }
+
+            .titoloAccediGoogle {
+                display: inline-flex;
+                align-items: center;
+                width: 100%;
+                gap: 12px;
+                padding: 11px 16px;
+                border-bottom: 1px solid #C1C1C1;
+
+                p {
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+            }
+
+            .corpoGoogle {
+                padding: 40px 38px;
+
+                .logoAllerGo {
+                    height: 39px;
+                    width: auto;
+                    margin-bottom: 40px;
+                }
+
+                .titoloGoogle {
+                    font-weight: 400;
+                    font-size: 24px;
+                    line-height: 32px;
+                    color: #202124;
+                    margin-bottom: 10px;
+                }
+
+                .sottotitoloGoogle {
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: #202124;
+                    margin-bottom: 40px;
+
+                    .appNome {
+                        color: var(--bluGoogle);
+                    }
+                }
+
+                .accountSelezionato {
+                    padding: 4px 13px 4px 4px;
+                    border: 1px solid #9E9E9E;
+                    border-radius: 15px;
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 10px;
+                    margin-top: 7px;
+
+                    .iniziale {
+                        height: 22px;
+                        width: 22px;
+                        border-radius: 50%;
+                        background-color: #7B1FA2;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: var(--bianco);
+                        font-weight: 400;
+                        font-size: 14px;
+                    }
+
+                    .email {
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 16px;
+                    }
+
+                    &+.privacy {
+                        margin-top: 40px;
+                    }
+                }
+
+                .azioniGoogle {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 19px;
+                    margin-top: 40px;
+
+                    .pulsanteGoogleAccount {
+                        display: block;
+                        width: 50%;
+                        border-radius: 15px;
+                        border: 1px solid #9E9E9E;
+                        padding: 7px;
+                        text-align: center;
+                        background-color: var(--bianco);
+                        font-weight: 500;
+                        font-size: 12px;
+                        line-height: 16px;
+                        color: var(--bluGoogle);
+                    }
+                }
+
+
+                .utenti {
+                    margin-bottom: 50px;
+
+                    .utente {
+                        display: flex;
+                        align-items: center;
+                        width: 100%;
+                        gap: 17px;
+                        margin-bottom: 12px;
+                        padding-bottom: 12px;
+                        border-bottom: 1px solid #C1C1C1;
+                        cursor: pointer;
+
+                        .iniziale {
+                            height: 28px;
+                            width: 28px;
+                            border-radius: 50%;
+                            background-color: #7B1FA2;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            color: var(--bianco);
+                            font-weight: 400;
+                            font-size: 15px;
+                            line-height: 17.58px;
+                        }
+
+                        .informazioniUtente {
+                            .nomeUtente {
+                                font-weight: 500;
+                                font-size: 14px;
+                                line-height: 20px;
+                            }
+
+                            .mailUtente {
+                                font-weight: 400;
+                                font-size: 12px;
+                                line-height: 16px;
+                                color: #5F6368;
+                            }
+                        }
+                    }
+
+                    .altroAccount {
+                        display: flex;
+                        align-items: center;
+                        width: 100%;
+                        gap: 17px;
+                        margin-bottom: 12px;
+                        padding-bottom: 12px;
+                        border-bottom: 1px solid #C1C1C1;
+
+                        .iconAccount {
+                            margin-left: 6px;
+                        }
+
+                        .altroAccountTesto {
+                            font-weight: 500;
+                            font-size: 14px;
+                            line-height: 20px;
+                        }
+                    }
+                }
+
+                .privacy {
+                    font-weight: 500;
+                    font-size: 12px;
+                    line-height: 16px;
+
+                    .collegamento {
+                        color: var(--bluGoogle);
+                    }
+                }
+            }
+
+            .footerGoogle {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+
+                .collegamentiFooterGoogle {
+                    display: inline-flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 100%;
+                    padding: 0 21px;
+                    padding-bottom: 13px;
+                    border-bottom: 1px solid #C1C1C180;
+
+                    .lingua {
+                        display: inline-flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        width: 137px;
+                        padding: 8px 16px;
+
+                        p {
+                            font-weight: 400;
+                            font-size: 12px;
+                            line-height: 16.8px;
+                            color: #202124;
+                        }
+                    }
+
+                    .collegamenti {
+                        display: inline-flex;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        .collegamento {
+                            padding: 6px 8px;
+                            font-weight: 500;
+                            font-size: 12px;
+                            line-height: 16.8px;
+                            color: #757575;
+                        }
+                    }
+                }
+
+                .navFooterGoogle {
+                    display: inline-flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    background-color: #F1F1F1;
+                    width: 100%;
+                    padding: 20px 38px 50px 38px;
+
+                    .frecce {
+                        width: 84px;
+                        display: inline-flex;
+                        justify-content: space-between;
+                        align-items: center;
+                    }
+                }
+            }
+        }
+
+        .passwordDimenticata{
+            padding-bottom: 67px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            display: none;
+
+            &.attivato {
+                display: block;
+            }
+
+            .modulo {
+                display: flex;
+                height: calc(100% - 122px);
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                flex-direction: column;
+
+                .inputContenitore {
+                    width: 100%;
+                    margin-bottom: 15px;
+
+                    span {
+                        font-weight: 400;
+                        font-size: 15px;
+                        color: var(--nero);
+                        display: block;
+                        margin-bottom: 15px;
+                        text-align: center;
+                    }
+
+                    input {
+                        background-color: #0000001A;
+                        border-radius: 20px;
+                        border: none;
+                        padding: 16px 52px 16px 52px;
+                        width: 100%;
+                        font-weight: 400;
+                        font-size: 18px;
+                        line-height: 23.44px;
+                        color: var(--nero);
+                        text-align: center;
+                        caret-color: var(--roso);
+                        transition: 0.3s;
+
+                        &::placeholder {
+                            font-weight: 400;
+                            font-size: 18px;
+                            line-height: 23.44px;
+                            color: #00000073;
+                            text-align: center;
+                        }
+
+                        &:focus,
+                        &:focus-visible {
+                            outline: none;
+                        }
+                    }
+                }
+
+                .didascalia {
+                    margin-top: 15px;
+                    font-weight: 400;
+                    font-size: 15px;
+                    line-height: 19.53px;
+                    color: #00000073;
+                    text-align: center;
+                }
+            }
+
+            .azioni {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 8px;
+                min-height: 122px;
+            }
+        }
+
+    }
+}
+
+@keyframes animazioneSpettacolo {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes animazioneNascondere {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes animazioneMostrareScegliAccountGoogle {
+    0% {
+        top: 100vh;
+    }
+
+    100% {
+        top: 0;
+    }
+}
+
+@keyframes animazioneNascondereScegliAccountGoogle {
+    0% {
+        top: 0;
+    }
+
+    100% {
+        top: 100vh;
+    }
+}
+
+@keyframes animazioneMostrareAccediAccountGoogle {
+    0% {
+        left: 100vw;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes animazioneNascondereAccediAccountGoogle {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: 100vw;
+    }
+
+}
+
+@keyframes animazioneAnnulaAccediAccountGoogle {
+    0% {
+        top: 0;
+    }
+
+    100% {
+        top: 100vh;
+    }
+
+}
