@@ -1,0 +1,280 @@
+.allergia {
+    .diapositiva {
+        position: fixed;
+        height: 100vh;
+        width: 100vw;
+        background-color: var(--nero);
+
+        &.username {
+            z-index: 30;
+
+            &.nascondere {
+                left: -100vw;
+                animation: animazioneNascondereDiapositiva;
+                animation-duration: 1s;
+            }
+
+            &.mostrare {
+                left: 0;
+                animation: animazioneMostrareDiapositiva;
+                animation-duration: 1s;
+            }
+        }
+
+        &.allergie {
+            z-index: 20;
+
+            &.nascondere {
+                left: -100vw;
+                animation: animazioneNascondereDiapositiva;
+                animation-duration: 1s;
+            }
+
+            &.mostrare {
+                left: 0;
+                animation: animazioneMostrareDiapositiva;
+                animation-duration: 1s;
+            }
+        }
+
+        .contenutoDiapositiva {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: calc(100vh - 180px);
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+
+            .menuAllergia {
+                &.nascondere {
+                    display: none;
+                }
+            }
+
+            .utente {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 32px;
+
+                .logoUtente {
+                    background-color: var(--beige);
+                    width: 148px;
+                    height: 148px;
+                    border-radius: 20px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    img {
+                        width: 101px;
+                    }
+                }
+
+                .nome {
+                    background-color: #D9D9D91A;
+                    border-radius: 20px;
+                    padding: 11px;
+                    max-width: 254px;
+                    width: 100%;
+                    border: none;
+                    text-align: center;
+                    font-weight: 400;
+                    font-size: 25px;
+                    line-height: 32.55px;
+                    color: var(--beige);
+                    caret-color: var(--roso);
+
+                    &::placeholder {
+                        text-align: center;
+                        font-weight: 400;
+                        font-size: 25px;
+                        line-height: 32.55px;
+                        color: #FCF3E680;
+                    }
+
+                    &:focus,
+                    &:focus-visible {
+                        outline: none;
+                    }
+                }
+            }
+
+            .trovaAllergiaContenuto {
+                position: absolute;
+                top: 23px;
+                width: 100%;
+
+                .trovaIcon {
+                    position: absolute;
+                    left: 22px;
+                    top: 17px;
+                }
+
+                .trova {
+                    background-color: #D9D9D91A;
+                    border-radius: 20px;
+                    padding: 17px 22px 18px 64px;
+                    width: 100%;
+                    border: none;
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 23.44px;
+                    color: var(--beige);
+                    caret-color: var(--roso);
+
+                    &::placeholder {
+                        font-weight: 400;
+                        font-size: 18px;
+                        line-height: 23.44px;
+                        color: #FCF3E680;
+                    }
+
+                    &:focus,
+                    &:focus-visible {
+                        outline: none;
+                    }
+                }
+            }
+
+            .testoInfo {
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 19.53px;
+                color: #FCF3E680;
+                text-align: left;
+                width: 100%;
+                margin-bottom: 33px;
+            }
+
+            .elencoAllergie {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                width: 100%;
+                justify-items: center;
+                gap: 20.2px 45.8px;
+            }
+
+            .allergiaContenuto {
+                position: relative;
+
+                .allergiaPulsannte {
+                    border: none;
+                    background-color: #FCF3E61A;
+                    border-radius: 20px;
+                    width: 74.2px;
+                    height: 74.2px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-bottom: 14.8px;
+                    transition: 0.3s;
+
+                    &.attivato {
+                        background-color: var(--roso);
+                    }
+
+                    &:hover {
+                        background-color: var(--roso);
+                    }
+                }
+
+                .nomeAllergia {
+                    font-weight: 400;
+                    font-size: 15px;
+                    line-height: 19.53px;
+                    color: var(--beige);
+                    text-align: center;
+                }
+
+
+                .rimuovereAllergia {
+                    position: absolute;
+                    top: -10px;
+                    right: -15px;
+                }
+            }
+
+            .allergiaSelezionata {
+                margin: 38px 0 32.8px 0;
+
+                width: 100%;
+                justify-content: flex-start;
+                display: none;
+
+                &.attivato {
+                    display: flex;
+                }
+            }
+        }
+
+
+        .nav {
+            display: inline-flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+
+            &.nascondere {
+                display: none;
+            }
+
+            .azione {
+                border: none;
+                padding: 0;
+                background-color: #0000;
+
+                &.nascondere {
+                    opacity: 0;
+                    pointer-events: none;
+                }
+
+                .icon {
+                    width: 8.36px;
+                    height: 16.33px;
+                    color: var(--beige);
+                }
+            }
+
+            .passi {
+                display: inline-flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 5px;
+
+                .passato {
+                    width: 27px;
+                    height: 7px;
+                    border-radius: 25px;
+                    background-color: #FCF3E633;
+
+                    &.attivato {
+                        background-color: var(--roso);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes animazioneMostrareDiapositiva {
+    0% {
+        left: -100vw;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes animazioneNascondereDiapositiva {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: -100vw;
+    }
+}

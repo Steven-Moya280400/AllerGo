@@ -1,0 +1,231 @@
+.allergia .diapositiva {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--nero);
+}
+.allergia .diapositiva.username {
+  z-index: 30;
+}
+.allergia .diapositiva.username.nascondere {
+  left: -100vw;
+  animation: animazioneNascondereDiapositiva;
+  animation-duration: 1s;
+}
+.allergia .diapositiva.username.mostrare {
+  left: 0;
+  animation: animazioneMostrareDiapositiva;
+  animation-duration: 1s;
+}
+.allergia .diapositiva.allergie {
+  z-index: 20;
+}
+.allergia .diapositiva.allergie.nascondere {
+  left: -100vw;
+  animation: animazioneNascondereDiapositiva;
+  animation-duration: 1s;
+}
+.allergia .diapositiva.allergie.mostrare {
+  left: 0;
+  animation: animazioneMostrareDiapositiva;
+  animation-duration: 1s;
+}
+.allergia .diapositiva .contenutoDiapositiva {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: calc(100vh - 180px);
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.allergia .diapositiva .contenutoDiapositiva .menuAllergia.nascondere {
+  display: none;
+}
+.allergia .diapositiva .contenutoDiapositiva .utente {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+.allergia .diapositiva .contenutoDiapositiva .utente .logoUtente {
+  background-color: var(--beige);
+  width: 148px;
+  height: 148px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.allergia .diapositiva .contenutoDiapositiva .utente .logoUtente img {
+  width: 101px;
+}
+.allergia .diapositiva .contenutoDiapositiva .utente .nome {
+  background-color: #D9D9D91A;
+  border-radius: 20px;
+  padding: 11px;
+  max-width: 254px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 32.55px;
+  color: var(--beige);
+  caret-color: var(--roso);
+}
+.allergia .diapositiva .contenutoDiapositiva .utente .nome::placeholder {
+  text-align: center;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 32.55px;
+  color: #FCF3E680;
+}
+.allergia .diapositiva .contenutoDiapositiva .utente .nome:focus,
+.allergia .diapositiva .contenutoDiapositiva .utente .nome:focus-visible {
+  outline: none;
+}
+.allergia .diapositiva .contenutoDiapositiva .trovaAllergiaContenuto {
+  position: absolute;
+  top: 23px;
+  width: 100%;
+}
+.allergia .diapositiva .contenutoDiapositiva .trovaAllergiaContenuto .trovaIcon {
+  position: absolute;
+  left: 22px;
+  top: 17px;
+}
+.allergia .diapositiva .contenutoDiapositiva .trovaAllergiaContenuto .trova {
+  background-color: #D9D9D91A;
+  border-radius: 20px;
+  padding: 17px 22px 18px 64px;
+  width: 100%;
+  border: none;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23.44px;
+  color: var(--beige);
+  caret-color: var(--roso);
+}
+.allergia .diapositiva .contenutoDiapositiva .trovaAllergiaContenuto .trova::placeholder {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23.44px;
+  color: #FCF3E680;
+}
+.allergia .diapositiva .contenutoDiapositiva .trovaAllergiaContenuto .trova:focus,
+.allergia .diapositiva .contenutoDiapositiva .trovaAllergiaContenuto .trova:focus-visible {
+  outline: none;
+}
+.allergia .diapositiva .contenutoDiapositiva .testoInfo {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 19.53px;
+  color: #FCF3E680;
+  text-align: left;
+  width: 100%;
+  margin-bottom: 33px;
+}
+.allergia .diapositiva .contenutoDiapositiva .elencoAllergie {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+  justify-items: center;
+  gap: 20.2px 45.8px;
+}
+.allergia .diapositiva .contenutoDiapositiva .allergiaContenuto {
+  position: relative;
+}
+.allergia .diapositiva .contenutoDiapositiva .allergiaContenuto .allergiaPulsannte {
+  border: none;
+  background-color: #FCF3E61A;
+  border-radius: 20px;
+  width: 74.2px;
+  height: 74.2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14.8px;
+  transition: 0.3s;
+}
+.allergia .diapositiva .contenutoDiapositiva .allergiaContenuto .allergiaPulsannte.attivato {
+  background-color: var(--roso);
+}
+.allergia .diapositiva .contenutoDiapositiva .allergiaContenuto .allergiaPulsannte:hover {
+  background-color: var(--roso);
+}
+.allergia .diapositiva .contenutoDiapositiva .allergiaContenuto .nomeAllergia {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 19.53px;
+  color: var(--beige);
+  text-align: center;
+}
+.allergia .diapositiva .contenutoDiapositiva .allergiaContenuto .rimuovereAllergia {
+  position: absolute;
+  top: -10px;
+  right: -15px;
+}
+.allergia .diapositiva .contenutoDiapositiva .allergiaSelezionata {
+  margin: 38px 0 32.8px 0;
+  width: 100%;
+  justify-content: flex-start;
+  display: none;
+}
+.allergia .diapositiva .contenutoDiapositiva .allergiaSelezionata.attivato {
+  display: flex;
+}
+.allergia .diapositiva .nav {
+  display: inline-flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.allergia .diapositiva .nav.nascondere {
+  display: none;
+}
+.allergia .diapositiva .nav .azione {
+  border: none;
+  padding: 0;
+  background-color: #0000;
+}
+.allergia .diapositiva .nav .azione.nascondere {
+  opacity: 0;
+  pointer-events: none;
+}
+.allergia .diapositiva .nav .azione .icon {
+  width: 8.36px;
+  height: 16.33px;
+  color: var(--beige);
+}
+.allergia .diapositiva .nav .passi {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+.allergia .diapositiva .nav .passi .passato {
+  width: 27px;
+  height: 7px;
+  border-radius: 25px;
+  background-color: #FCF3E633;
+}
+.allergia .diapositiva .nav .passi .passato.attivato {
+  background-color: var(--roso);
+}
+@keyframes animazioneMostrareDiapositiva {
+  0% {
+    left: -100vw;
+  }
+  100% {
+    left: 0;
+  }
+}
+@keyframes animazioneNascondereDiapositiva {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100vw;
+  }
+}
