@@ -33,7 +33,7 @@
 .allergia .diapositiva .contenutoDiapositiva {
   justify-content: center;
   width: 100%;
-  height: calc(100vh - 70px);
+  height: calc(100vh - 120px);
   position: relative;
   align-items: center;
   display: grid;
