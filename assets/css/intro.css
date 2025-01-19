@@ -4,9 +4,6 @@
   width: 100vw;
   background-color: var(--beige);
 }
-.intro .diapositiva .bar {
-  position: absolute;
-}
 .intro .diapositiva .gif {
   max-width: 100%;
   width: 100vw;
@@ -102,9 +99,6 @@
 }
 .intro .diapositiva.personalizza .nav .azione .icon {
   color: var(--beige);
-}
-.intro .diapositiva.personalizza .bar {
-  background-color: var(--beige);
 }
 .intro .diapositiva.esplora {
   z-index: 10;
