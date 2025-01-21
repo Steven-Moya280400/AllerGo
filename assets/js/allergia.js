@@ -1,5 +1,6 @@
 const username = document.getElementById('username');
 const allergie = document.getElementById('allergie');
+const preferenzeAlimentari = document.getElementById('preferenzeAlimentari');
 
 function inserisciNome() {
     const nome = document.getElementById('nome');
@@ -17,9 +18,11 @@ function avantiDiapositiva(diapositiva) {
     if (diapositiva == "allergie") {
         username.classList.add('nascondere');
     }
-    else if (diapositiva == "esplora") {
-        personalizza.classList.add('nascondere');
-        body.classList.remove('nero');
+    else if (diapositiva == "preferenzeAlimentari") {
+        allergie.classList.add('nascondere');
+    }
+    else if(diapositiva == "riepilogo"){
+        preferenzeAlimentari.classList.add('nascondere');
     }
 
 }
@@ -32,12 +35,18 @@ function indietroDiapositiva(diapositiva) {
             username.classList.remove("mostrare");
         }, 1000);
     }
-    else if (diapositiva == "esplora") {
-        personalizza.classList.add('mostrare');
-        body.classList.add('nero');
+    else if (diapositiva == "preferenzeAlimentari") {
+        allergie.classList.add('mostrare');
         setTimeout(function () {
-            personalizza.classList.remove("nascondere");
-            personalizza.classList.remove("mostrare");
+            allergie.classList.remove("nascondere");
+            allergie.classList.remove("mostrare");
+        }, 1000);
+    }
+    else if (diapositiva == "riepilogo") {
+        preferenzeAlimentari.classList.add('mostrare');
+        setTimeout(function () {
+            preferenzeAlimentari.classList.remove("nascondere");
+            preferenzeAlimentari.classList.remove("mostrare");
         }, 1000);
     }
 }
@@ -58,4 +67,12 @@ function cercareAllergia(){
 function ricercaRavvicinata(){
     document.getElementById('menuAllergia').classList.remove('nascondere')
     document.getElementById('navMenuAllergia').classList.remove('nascondere')
+}
+
+function selezionaPreferenzeAlimentari(){
+    document.getElementById('preferenzeAlimentariSelezionata').classList.add('attivato')
+}
+
+function rimuoverePreferenzeAlimentari(){
+    document.getElementById('preferenzeAlimentariSelezionata').classList.remove('attivato')
 }
