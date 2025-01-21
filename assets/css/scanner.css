@@ -1,0 +1,96 @@
+.scanner {
+  background-image: url(../img/AdobeStock_785222102.jpeg);
+  height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+.scanner .filtro {
+  height: 100vh;
+  width: 100%;
+  background-color: #00000078;
+  position: relative;
+}
+.scanner .filtro .profilo {
+  background-color: var(--roso);
+  height: 42px;
+  width: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  position: absolute;
+  right: 38px;
+  top: 18px;
+}
+.scanner .filtro .scanContenitore {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 53px;
+}
+.scanner .filtro .scanContenitore .scanPulsante {
+  background-color: #000000B2;
+  height: 42px;
+  width: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.scanner .filtro .scanContenitore .scanPulsante:hover {
+  background-color: var(--roso);
+}
+.scanner .filtro .scanContenitore .scan {
+  width: 244px;
+  height: 244px;
+  position: relative;
+}
+.scanner .filtro .scanContenitore .scan .frame {
+  position: relative;
+  z-index: 10;
+}
+.scanner .filtro .scanContenitore .scan .sfondo {
+  position: absolute;
+  bottom: 0;
+  left: 4px;
+  width: 236px;
+  height: 136px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 26.34%, rgba(153, 153, 153, 0) 88.42%);
+  animation: animazioneScan;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+.scanner .filtro .scanContenitore .scan .sfondo::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 2px;
+  background-color: #FFFFFF80;
+  width: 324px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@keyframes animazioneScan {
+  0% {
+    height: 136px;
+  }
+  25% {
+    height: 240px;
+  }
+  50% {
+    height: 75px;
+  }
+  75% {
+    height: 240px;
+  }
+  100% {
+    height: 136px;
+  }
+}
