@@ -24,6 +24,11 @@
   right: 38px;
   top: 18px;
 }
+.scanner .filtro .profilo .utenteIniziale {
+  font-family: 'Blenny';
+  font-size: 35px;
+  color: var(--beige);
+}
 .scanner .filtro .scanContenitore {
   position: absolute;
   top: 62px;
