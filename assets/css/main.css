@@ -131,3 +131,41 @@ body.nero .inizioSessione .inizioSessioneContenuto .ritorno .icon {
   transition: 0.3s;
   z-index: 100;
 }
+.menu {
+  width: calc(100% - 32px);
+  position: fixed;
+  bottom: 34px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--roso);
+  padding: 7px 6px;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.menu .menuPulsante {
+  height: 42px;
+  width: 113px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+.menu .menuPulsante .icon {
+  color: var(--beige);
+  transition: 0.3s;
+}
+.menu .menuPulsante:hover {
+  background-color: var(--beige);
+}
+.menu .menuPulsante:hover .icon {
+  color: var(--roso);
+}
+.menu .menuPulsante.attivato {
+  background-color: var(--beige);
+}
+.menu .menuPulsante.attivato .icon {
+  color: var(--roso);
+}
