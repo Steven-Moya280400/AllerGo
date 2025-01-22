@@ -64,6 +64,15 @@
 .allergia .diapositiva .utente .logoUtente img {
   width: 101px;
 }
+.allergia .diapositiva .utente .utenteIniziale {
+  font-family: 'Blenny';
+  font-size: 140px;
+  color: var(--roso);
+  display: none;
+}
+.allergia .diapositiva .utente .utenteIniziale.mostrare {
+  display: block;
+}
 .allergia .diapositiva .utente .nome {
   background-color: #D9D9D91A;
   border-radius: 20px;
