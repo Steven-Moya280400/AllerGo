@@ -63,7 +63,7 @@
                         <p class="iniziale">C</p>
                         <p class="nome">Christian</p>
                     </div>
-                    <button class="condividerePulsante">
+                    <button class="condividerePulsante" onclick="mostrareCondividere();">
                         <img src="assets/svg/upload.svg">
                     </button>
 
@@ -96,6 +96,131 @@
                         fill="currentColor" />
                 </svg>
             </button>
+        </section>
+
+        <section id="condividere" class="condividere">
+            <div class="headerCondividere">
+                <div class="profilo">
+                    <div class="iniziale">
+                        <span class="utenteIniziale">C</span>
+                    </div>
+                    <div class="informazioniUtente">
+                        <p class="titolo">Scheda di Christian</p>
+                        <p class="url">allergo.com <span class="opzioni">Opzioni ></span></p>
+                    </div>
+                </div>
+                <button class="xPulsante" onclick="nascondereCondividere();">
+                    <img src="assets/svg/xGrigio.svg">
+                </button>
+            </div>
+            <div class="contatti">
+                <div class="contatto">
+                    <div class="fotoContenuto">
+                        <img class="foto" src="assets/img/sandy.png">
+                        <img class="messaggi" src="assets/svg/message.svg">
+                    </div>
+                    <p class="nome">Sandy Wilder Cheng</p>
+                </div>
+
+                <div class="contatto">
+                    <div class="fotoContenuto">
+                        <img class="foto" src="assets/img/kevin.png">
+                        <img class="messaggi" src="assets/svg/message.svg">
+                    </div>
+                    <p class="nome">Kevin Leong</p>
+                </div>
+
+                <div class="contatto">
+                    <div class="fotoContenuto">
+                        <div class="doppiaFoto">
+                            <img class="foto primo" src="assets/img/sandy.png">
+                            <img class="foto secondo" src="assets/img/kevin2.png">
+                        </div>
+                        <img class="messaggi" src="assets/svg/message.svg">
+                    </div>
+                    <p class="nome">Sandy and Kevin</p>
+                </div>
+
+                <div class="contatto">
+                    <div class="fotoContenuto">
+                        <img class="foto" src="assets/img/juliana.png">
+                        <img class="messaggi" src="assets/svg/message.svg">
+                    </div>
+                    <p class="nome">Juliana Mejia</p>
+                </div>
+
+                <div class="contatto">
+                    <div class="fotoContenuto">
+                        <img class="foto" src="assets/img/greg.png">
+                        <img class="messaggi" src="assets/svg/message.svg">
+                    </div>
+                    <p class="nome">Greg Apodaca</p>
+                </div>
+            </div>
+            <div class="apps">
+                <div class="app">
+                    <div class="icon">
+                        <img src="assets/svg/leading.svg">
+                    </div>
+                    <p class="nome">Airdrop</p>
+                </div>
+
+                <div class="app">
+                    <img class="icon" src="assets/svg/whatsapp.svg">
+                    <p class="nome">WhatsApp</p>
+                </div>
+
+                <div class="app">
+                    <img class="icon" src="assets/svg/instagram.svg">
+                    <p class="nome">Instagram</p>
+                </div>
+
+                <div class="app">
+                    <img class="icon" src="assets/svg/emailApp.svg">
+                    <p class="nome">Email</p>
+                </div>
+
+                <div class="app">
+                    <img class="icon" src="assets/svg/message.svg">
+                    <p class="nome">Messaggi</p>
+                </div>
+
+                <div class="app">
+                    <img class="icon" src="assets/svg/photos.svg">
+                    <p class="nome">Photos</p>
+                </div>
+            </div>
+            <div class="azioni">
+                <div class="azione">
+                    <p class="nome">Copia</p>
+                    <img src="assets/svg/copia.svg">
+                </div>
+                <div class="azione bordo">
+                    <p class="nome">Aggiungi a elenco lettura</p>
+                    <img src="assets/svg/lettura.svg">
+                </div>
+                <div class="azione bordo">
+                    <p class="nome">Aggiungi ai Preferiti</p>
+                    <img src="assets/svg/preferiti.svg">
+                </div>
+                <div class="azione bordo">
+                    <p class="nome">Trova nella Pagina</p>
+                    <img src="assets/svg/trovaNero.svg">
+                </div>
+                <div class="azione bordo">
+                    <p class="nome">Aggiungi a Schermata Home</p>
+                    <img src="assets/svg/aggiunggi.svg">
+                </div>
+                <div class="azione bordo">
+                    <p class="nome">Modifica con Contrassegno</p>
+                    <img src="assets/svg/modifica.svg">
+                </div>
+                <div class="azione">
+                    <p class="nome">Stampa</p>
+                    <img src="assets/svg/stampa.svg">
+                </div>
+            </div>
+            <p class="modificaAzioni">Modifica azioni...</p>
         </section>
     </main>
     <div class="menu">
@@ -142,6 +267,8 @@
     </div>
 
     <div class="bar"></div>
+
+    <script src="assets/js/schede.js"></script>
 </body>
 
 </html>

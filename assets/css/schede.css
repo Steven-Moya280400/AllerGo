@@ -141,3 +141,230 @@
 .schede .schedeContenuto .ulteriorePulsante:hover .icon {
   color: var(--roso);
 }
+.schede .condividere {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  background-color: var(--bianco);
+  top: 100vh;
+  left: 0;
+  z-index: 200;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  padding-bottom: 30px;
+}
+.schede .condividere::-webkit-scrollbar {
+  display: none;
+}
+.schede .condividere.mostrare {
+  top: 0;
+  animation: animazioneMostrareCondividere;
+  animation-duration: 1s;
+}
+.schede .condividere.nascondere {
+  top: 100vh;
+  animation: animazioneNascondereCondividere;
+  animation-duration: 1s;
+}
+.schede .condividere .headerCondividere {
+  padding: 16px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #B5C1BE;
+}
+.schede .condividere .headerCondividere .profilo {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.schede .condividere .headerCondividere .profilo .iniziale {
+  background-color: var(--beige);
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+.schede .condividere .headerCondividere .profilo .iniziale .utenteIniziale {
+  font-family: 'Blenny';
+  font-size: 35px;
+  color: var(--roso);
+}
+.schede .condividere .headerCondividere .profilo .informazioniUtente .titolo {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19.09px;
+  margin-bottom: 2px;
+}
+.schede .condividere .headerCondividere .profilo .informazioniUtente .url {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15.51px;
+  color: #818889;
+}
+.schede .condividere .headerCondividere .profilo .informazioniUtente .url .opzioni {
+  margin-left: 8px;
+  color: #007AFF;
+}
+.schede .condividere .headerCondividere .xPulsante {
+  width: 29px;
+  height: 29px;
+  background-color: #7C80831A;
+  padding: 0;
+  border: none;
+  border-radius: 37px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.schede .condividere .contatti {
+  padding: 21px 16px 28px 16px;
+  display: flex;
+  gap: 20px;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  border-bottom: 1px solid #54545657;
+}
+.schede .condividere .contatti::-webkit-scrollbar {
+  display: none;
+}
+.schede .condividere .contatti .contatto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  min-width: 76px;
+}
+.schede .condividere .contatti .contatto .fotoContenuto {
+  position: relative;
+  height: 62px;
+  width: 62px;
+}
+.schede .condividere .contatti .contatto .fotoContenuto .foto {
+  height: 62px;
+  width: 62px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.schede .condividere .contatti .contatto .fotoContenuto .doppiaFoto {
+  position: relative;
+  height: 62px;
+  width: 62px;
+}
+.schede .condividere .contatti .contatto .fotoContenuto .doppiaFoto .foto {
+  height: 44px;
+  width: 44px;
+}
+.schede .condividere .contatti .contatto .fotoContenuto .doppiaFoto .foto.primo {
+  position: absolute;
+  z-index: 10;
+}
+.schede .condividere .contatti .contatto .fotoContenuto .doppiaFoto .foto.secondo {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 20;
+  outline: 3px solid var(--bianco);
+}
+.schede .condividere .contatti .contatto .fotoContenuto .messaggi {
+  height: 20px;
+  width: 20px;
+  object-fit: contain;
+  position: absolute;
+  right: -2px;
+  bottom: -3px;
+  z-index: 30;
+}
+.schede .condividere .contatti .contatto .nome {
+  max-width: 76px;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
+  letter-spacing: 0.06px;
+  text-align: center;
+}
+.schede .condividere .apps {
+  padding: 22px 16px 10px 16px;
+  display: flex;
+  gap: 29px;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  align-items: center;
+}
+.schede .condividere .apps::-webkit-scrollbar {
+  display: none;
+}
+.schede .condividere .apps .app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.schede .condividere .apps .app .icon {
+  width: 60px;
+  height: 60px;
+  box-shadow: 0px 4px 15px 0px #00000026;
+  margin-bottom: 5px;
+  border-radius: 13.36px;
+  object-fit: cover;
+}
+.schede .condividere .apps .app div.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.schede .condividere .apps .app .nome {
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 14.32px;
+}
+.schede .condividere .azioni {
+  padding: 0 16px;
+}
+.schede .condividere .azioni .azione {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 14px 10px 16px 20px;
+  align-items: center;
+}
+.schede .condividere .azioni .azione.bordo {
+  border-bottom: 1px solid #C6C6C8;
+}
+.schede .condividere .azioni .azione .nome {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+}
+.schede .condividere .azioni .azione:first-of-type {
+  margin-bottom: 12px;
+}
+.schede .condividere .modificaAzioni {
+  margin-top: 26px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #007AFF;
+  padding: 0 36px;
+}
+@keyframes animazioneMostrareCondividere {
+  0% {
+    top: 100vh;
+  }
+  100% {
+    top: 0;
+  }
+}
+@keyframes animazioneNascondereCondividere {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 100vh;
+  }
+}

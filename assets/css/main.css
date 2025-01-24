@@ -143,6 +143,7 @@ body.nero .inizioSessione .inizioSessioneContenuto .ritorno .icon {
   display: inline-flex;
   align-items: center;
   justify-content: space-around;
+  z-index: 100;
 }
 .menu .menuPulsante {
   height: 42px;
