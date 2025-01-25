@@ -1,0 +1,230 @@
+.community {
+    .parereMedici {
+        padding-bottom: 110px;
+
+        .titolo {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 26px 38px 0 38px;
+            width: 100%;
+            margin-bottom: 17px;
+
+            .testo {
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 26.04px;
+
+            }
+
+            .profilo {
+                background-color: var(--roso);
+                height: 42px;
+                width: 42px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 10px;
+
+                .utenteIniziale {
+                    font-family: 'Blenny';
+                    font-size: 35px;
+                    color: var(--beige);
+                }
+            }
+        }
+
+        .opinioni {
+            display: flex;
+            overflow-x: scroll;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+            padding: 0 16px;
+            gap: 12px;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            .opinione {
+                min-width: 235px;
+                height: 235px;
+                background-color: var(--nero);
+                border-radius: 30px;
+                padding: 22px 19px;
+                position: relative;
+
+                .headerOpinione {
+                    display: flex;
+                    align-items: flex-end;
+                    gap: 19px;
+                    padding-bottom: 14px;
+                    border-bottom: 1px solid var(--roso);
+                    margin-bottom: 14px;
+
+                    .foto {
+                        width: 77px;
+                        height: 77px;
+                        object-fit: cover;
+                    }
+
+                    .nome {
+                        font-weight: 300;
+                        font-size: 14px;
+                        line-height: 18.23px;
+                        color: var(--beige);
+                    }
+                }
+
+                .citazione {
+                    font-weight: 700;
+                    font-size: 26px;
+                    line-height: 27.83px;
+                    color: var(--beige);
+                }
+
+                .marcatore {
+                    color: var(--beige);
+                    position: absolute;
+                    top: 22px;
+                    right: 19px;
+                    transition: 0.3s;
+
+                    &:hover {
+                        color: var(--roso);
+                    }
+                }
+            }
+        }
+
+        .ricette {
+            margin: 25px 0 31px 0;
+
+            .titoloRicette {
+                font-weight: 700;
+                line-height: 26.04px;
+                font-size: 20px;
+                margin-bottom: 30px;
+                padding: 0 38px;
+            }
+
+            .glide {
+                padding-bottom: 16px;
+            }
+
+            .ricettaContenuto {
+                padding: 0 16px;
+
+                .ricetta {
+                    background-color: var(--nero);
+                    width: 100%;
+                    border-radius: 30px;
+                    padding: 8px 27px 8px 7px;
+                    display: flex;
+                    gap: 15px;
+                    align-items: center;
+                    position: relative;
+
+                    .foto {
+                        height: 143px;
+                        width: 135px;
+                        object-fit: cover;
+                    }
+
+                    .infoRicetta {
+                        .nome {
+                            font-weight: 700;
+                            line-height: 27.83px;
+                            font-size: 26px;
+                            color: var(--beige);
+                            padding-bottom: 8px;
+                            border-bottom: 1px solid var(--roso);
+                        }
+
+                        .descrizione {
+                            font-weight: 300;
+                            line-height: 18.23px;
+                            font-size: 14px;
+                            color: var(--beige);
+                            margin-top: 8px;
+                            height: 28px;
+                            overflow: visible;
+                        }
+                    }
+
+                    .marcatore {
+                        color: var(--beige);
+                        position: absolute;
+                        top: 39px;
+                        right: 28px;
+                        transition: 0.3s;
+
+                        &:hover {
+                            color: var(--roso);
+                        }
+                    }
+                }
+            }
+
+            .glide__bullets {
+                bottom: 0;
+
+                .glide__bullet {
+                    width: 13.05px;
+                    height: 5px;
+                    background-color: #00000033;
+                    border-radius: 25px;
+
+                    &--active {
+                        background-color: var(--roso);
+                    }
+                }
+            }
+
+        }
+
+        .retiSocialiContenuto {
+            .titoloRetiSociali {
+                font-weight: 400;
+                line-height: 19.53px;
+                font-size: 15px;
+                margin-bottom: 8px;
+                text-align: center;
+                color: #00000080;
+            }
+
+            .retiSociali {
+                display: flex;
+                width: 100%;
+                align-items: center;
+                justify-content: center;
+                gap: 7px;
+
+                .reteSociale {
+                    width: 45px;
+                    height: 45px;
+                    border-radius: 10px;
+                    background-color: #0000001A;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    transition: 0.3s;
+
+
+                    .icon {
+                        color: var(--nero);
+                        transition: 0.3s;
+                    }
+
+                    &:hover {
+                        background-color: var(--nero);
+
+                        .icon {
+                            color: var(--roso);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
