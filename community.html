@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css">
 </head>
 
-<body class="beige">
+<body id="body" class="beige">
     <main class="community">
         <section class="parereMedici">
             <div class="titolo">
@@ -24,7 +24,7 @@
             </div>
 
             <div class="opinioni">
-                <div class="opinione">
+                <div class="opinione" onclick="mostrareArticolo('quandoIlCiboPuoDiventarePericoloso')">
                     <div class="headerOpinione">
                         <img class="foto" src="assets/img/michele.png">
                         <p class="nome">Dott. Michele Malaguarnera</p>
@@ -38,7 +38,7 @@
                     </svg>
                 </div>
 
-                <div class="opinione">
+                <div class="opinione" onclick="mostrareArticolo('allergieIntolleranzeEceliachie')">
                     <div class="headerOpinione">
                         <img class="foto" src="assets/img/sandri.png">
                         <p class="nome">Dott. Sandri Giancarlo</p>
@@ -52,40 +52,12 @@
                     </svg>
                 </div>
 
-                <div class="opinione">
+                <div class="opinione" onclick="mostrareArticolo('modelloMediterraneoIlPiuCompleto')">
                     <div class="headerOpinione">
-                        <img class="foto" src="assets/img/valerio.png">
-                        <p class="nome">Dietologo Valerio La Pinta</p>
+                        <img class="foto" src="assets/img/elisabetta.png">
+                        <p class="nome">Dott. Elisabetta Bernardi</p>
                     </div>
-                    <p class="citazione">“Applicazione della dieta chetogenica”</p>
-                    <svg class="marcatore" width="14" height="15" viewBox="0 0 14 15" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M12.178 14.9978C11.9426 14.9972 11.7097 14.9507 11.4926 14.8612C11.2756 14.7716 11.0788 14.6407 10.9136 14.476L6.99999 10.6553L3.08641 14.4785C2.83506 14.7289 2.51272 14.8992 2.16141 14.9671C1.81009 15.035 1.4461 14.9973 1.11688 14.8591C0.784398 14.7278 0.499965 14.501 0.30073 14.2085C0.101495 13.916 -0.00328312 13.5712 7.84221e-05 13.2193V3.12455C7.84221e-05 2.29587 0.335301 1.50112 0.932 0.915159C1.5287 0.329192 2.338 0 3.18186 0H10.8181C11.236 0 11.6497 0.0808188 12.0357 0.237842C12.4218 0.394865 12.7725 0.625018 13.068 0.915159C13.3634 1.2053 13.5978 1.54975 13.7577 1.92883C13.9176 2.30792 13.9999 2.71423 13.9999 3.12455V13.2193C14.0035 13.571 13.8991 13.9155 13.7003 14.208C13.5016 14.5005 13.2177 14.7274 12.8857 14.8591C12.6615 14.9511 12.421 14.9983 12.178 14.9978ZM3.18186 1.24982C2.67554 1.24982 2.18996 1.44733 1.83194 1.79891C1.47392 2.15049 1.27279 2.62734 1.27279 3.12455V13.2193C1.27256 13.3235 1.30376 13.4253 1.36245 13.5121C1.42114 13.5988 1.50469 13.6665 1.60254 13.7066C1.7004 13.7467 1.80816 13.7575 1.91223 13.7375C2.01629 13.7175 2.11199 13.6677 2.18723 13.5943L6.55455 9.33177C6.67378 9.21538 6.83506 9.15005 7.00318 9.15005C7.17129 9.15005 7.33258 9.21538 7.45181 9.33177L11.814 13.593C11.8893 13.6664 11.985 13.7162 12.089 13.7362C12.1931 13.7562 12.3009 13.7455 12.3987 13.7053C12.4966 13.6652 12.5801 13.5975 12.6388 13.5108C12.6975 13.4241 12.7287 13.3222 12.7285 13.2181V3.12455C12.7285 2.62734 12.5273 2.15049 12.1693 1.79891C11.8113 1.44733 11.3257 1.24982 10.8194 1.24982H3.18186Z"
-                            fill="currentColor" />
-                    </svg>
-                </div>
-
-                <div class="opinione">
-                    <div class="headerOpinione">
-                        <img class="foto" src="assets/img/sandri.png">
-                        <p class="nome">Dott. Sandri Giancarlo</p>
-                    </div>
-                    <p class="citazione">"Come evitare uno shock anafilattico?"</p>
-                    <svg class="marcatore" width="14" height="15" viewBox="0 0 14 15" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M12.178 14.9978C11.9426 14.9972 11.7097 14.9507 11.4926 14.8612C11.2756 14.7716 11.0788 14.6407 10.9136 14.476L6.99999 10.6553L3.08641 14.4785C2.83506 14.7289 2.51272 14.8992 2.16141 14.9671C1.81009 15.035 1.4461 14.9973 1.11688 14.8591C0.784398 14.7278 0.499965 14.501 0.30073 14.2085C0.101495 13.916 -0.00328312 13.5712 7.84221e-05 13.2193V3.12455C7.84221e-05 2.29587 0.335301 1.50112 0.932 0.915159C1.5287 0.329192 2.338 0 3.18186 0H10.8181C11.236 0 11.6497 0.0808188 12.0357 0.237842C12.4218 0.394865 12.7725 0.625018 13.068 0.915159C13.3634 1.2053 13.5978 1.54975 13.7577 1.92883C13.9176 2.30792 13.9999 2.71423 13.9999 3.12455V13.2193C14.0035 13.571 13.8991 13.9155 13.7003 14.208C13.5016 14.5005 13.2177 14.7274 12.8857 14.8591C12.6615 14.9511 12.421 14.9983 12.178 14.9978ZM3.18186 1.24982C2.67554 1.24982 2.18996 1.44733 1.83194 1.79891C1.47392 2.15049 1.27279 2.62734 1.27279 3.12455V13.2193C1.27256 13.3235 1.30376 13.4253 1.36245 13.5121C1.42114 13.5988 1.50469 13.6665 1.60254 13.7066C1.7004 13.7467 1.80816 13.7575 1.91223 13.7375C2.01629 13.7175 2.11199 13.6677 2.18723 13.5943L6.55455 9.33177C6.67378 9.21538 6.83506 9.15005 7.00318 9.15005C7.17129 9.15005 7.33258 9.21538 7.45181 9.33177L11.814 13.593C11.8893 13.6664 11.985 13.7162 12.089 13.7362C12.1931 13.7562 12.3009 13.7455 12.3987 13.7053C12.4966 13.6652 12.5801 13.5975 12.6388 13.5108C12.6975 13.4241 12.7287 13.3222 12.7285 13.2181V3.12455C12.7285 2.62734 12.5273 2.15049 12.1693 1.79891C11.8113 1.44733 11.3257 1.24982 10.8194 1.24982H3.18186Z"
-                            fill="currentColor" />
-                    </svg>
-                </div>
-
-                <div class="opinione">
-                    <div class="headerOpinione">
-                        <img class="foto" src="assets/img/luigi.png">
-                        <p class="nome">Dott. Luigi Minucci</p>
-                    </div>
-                    <p class="citazione">“Perchè sono importanti le proteine”</p>
+                    <p class="citazione">“Modello mediterraneo, il più completo"</p>
                     <svg class="marcatore" width="14" height="15" viewBox="0 0 14 15" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -198,6 +170,247 @@
                 </div>
             </div>
         </section>
+
+        <section class="articoloMedico" id="quandoIlCiboPuoDiventarePericoloso">
+            <div class="headerArticolo">
+                <div class="headerContenuto">
+                    <div class="medico">
+                        <img class="foto" src="assets/img/michele.png">
+                        <p class="nome">Dottore <br> Michele Malaguarnera</p>
+                    </div>
+                    <button class="chiudiArticolo" onclick="nascondereArticolo('quandoIlCiboPuoDiventarePericoloso')">
+                        <svg class="icon" width="17" height="17" viewBox="0 0 17 17" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M15.9584 1.04159L15.9584 1.04155C15.8037 0.886886 15.5939 0.8 15.3751 0.8C15.1564 0.8 14.9466 0.886886 14.7918 1.04155L14.7918 1.04157L8.5 7.33339L2.20818 1.04157L2.20816 1.04155C2.05345 0.886886 1.84364 0.8 1.62488 0.8C1.40611 0.8 1.19631 0.886886 1.04159 1.04155L1.04155 1.04159C0.886886 1.19631 0.8 1.40611 0.8 1.62488C0.8 1.84364 0.886886 2.05345 1.04155 2.20816L1.04157 2.20818L7.33339 8.5L1.04157 14.7918L1.04155 14.7918C0.886886 14.9466 0.8 15.1564 0.8 15.3751C0.8 15.5939 0.886886 15.8037 1.04155 15.9584L1.04159 15.9584C1.19631 16.1131 1.40611 16.2 1.62488 16.2C1.84364 16.2 2.05345 16.1131 2.20816 15.9584L2.20818 15.9584L8.5 9.66661L14.7918 15.9584L14.7918 15.9584C14.9466 16.1131 15.1564 16.2 15.3751 16.2C15.5939 16.2 15.8037 16.1131 15.9584 15.9584L15.9584 15.9584C16.1131 15.8037 16.2 15.5939 16.2 15.3751C16.2 15.1564 16.1131 14.9466 15.9584 14.7918L15.9584 14.7918L9.66661 8.5L15.9584 2.20818L15.9584 2.20816C16.1131 2.05345 16.2 1.84364 16.2 1.62488C16.2 1.40611 16.1131 1.19631 15.9584 1.04159Z"
+                                fill="currentColor" stroke="currentColor" stroke-width="0.4" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <p class="titolo">“Quando il cibo può diventare pericoloso?”</p>
+            <div class="informazioni">
+                <p>
+                    Le allergie si sviluppano quando il sistema immunitario interpreta come minaccia una
+                    sostanza altrimenti innocua, chiamata allergene. Nei soggetti predisposti,
+                    questo innesca la produzione di immunoglobuline E (IgE), anticorpi che causano una reazione
+                    allergica.
+                    Nel caso delle allergie alimentari,
+                    il corpo riconosce specifici alimenti come dannosi, scatenando
+                    una risposta immunitaria
+                    anche con l'ingestione di piccole quantità del cibo allergizzante.
+                    I sintomi possono variare da problemi digestivi a orticaria e gonfiori.
+                    <br>
+                    <br>
+                    <span class="didascalia">Come si manifesta un'allergia alimentare?</span>
+                    <br>
+                    <br>
+                    I sintomi di un'allergia alimentare variano da lievi a gravi e comprendono:
+                </p>
+                <ul>
+                    <li>Bruciore o formicolio in bocca</li>
+                    <li>Eruzioni cutanee</li>
+                    <li>Gonfiore di labbra, lingua, gola o volto</li>
+                    <li>Difficoltà a deglutire</li>
+                    <li>Congestione nasale</li>
+                    <li>Problemi respiratori</li>
+                    <li>Dolori addominali, nausea, vomito, diarrea</li>
+                    <li>Vertigini o svenimenti</li>
+                    <li>Shock anafilattico</li>
+                </ul>
+                <br>
+                <br>
+                <img src="assets/img/AdobeStock_121809509 1.png">
+                <br>
+                <br>
+                <p>
+                    <span class="didascalia">Quali sono i cibi più a rischio?</span>
+                    <br>
+                    <br>
+
+                    Tra gli alimenti che causano
+                    più frequentemente reazioni allergiche troviamo il latte, le uova, le arachidi, il pesce, la soia
+                    e il frumento. Questi cibi colpiscono circa il 7% dei bambini italiani. Tra gli adulti, circa il 3%
+                    soffre di allergie a molluschi, nocciole e frutta secca. Tuttavia, identificare l'alimento
+                    responsabile non è sempre semplice. Purtroppo, molte persone ricorrono a metodi non scientifici,
+                    come test
+                    sui capelli o sulla forza muscolare, che si rivelano inutili e costosi.
+                    Come si arriva alla diagnosi?
+                    Non esiste un test unico
+                    e definitivo per diagnosticare un’allergia alimentare. Il medico valuterà i sintomi descritti
+                    dal paziente, insieme alla storia familiare di allergie e a un esame fisico approfondito.
+                    In seguito, potrà sottoporre
+                    il paziente a test specifici come il prick test, che consiste nell’applicazione di piccole quantità
+                    di allergeni sulla pelle
+                    per osservare eventuali reazioni.
+
+                    <br>
+                    <br>
+                    <span class="didascalia">Come prevenire le allergie alimentari?</span>
+                    <br>
+                    <br>
+
+                    La prevenzione migliore consiste nell'evitare i cibi che provocano reazioni allergiche. È
+                    fondamentale leggere attentamente le etichette degli alimenti e, per chi ha già sperimentato una
+                    reazione grave, indossare un braccialetto o una medaglietta che indichi l'allergia
+                    in caso di emergenza. Quando si
+                    è in viaggio, soprattutto all'estero,
+                    è importante informarsi accuratamente sugli ingredienti
+                    dei piatti ordinati, per evitare spiacevoli sorprese.
+
+                    <br>
+                    <br>
+                    <span class="didascalia">Cosa fare in caso di shock anafilattico?</span>
+                    <br>
+                    <br>
+
+                    Lo shock anafilattico è la reazione più pericolosa legata alle allergie alimentari. Questa grave
+                    risposta immunitaria può svilupparsi rapidamente, da pochi minuti fino
+                    a due ore dal contatto
+                    con l'allergene. I sintomi includono un drastico calo della pressione sanguigna e la restrizione
+                    delle vie respiratorie, che possono portare al blocco della respirazione.
+                    Senza un trattamento tempestivo, lo shock anafilattico può essere letale. In caso di sintomi di
+                    anafilassi, è essenziale contattare immediatamente i servizi
+                    di emergenza (112) o recarsi al Pronto Soccorso. L'adrenalina, somministrata tramite
+                    un auto-iniettore, può essere un intervento salvavita, stabilizzando temporaneamente la pressione
+                    e il battito cardiaco fino all'arrivo dei soccorsi.
+                </p>
+            </div>
+            <button class="indietro" onclick="nascondereArticolo('quandoIlCiboPuoDiventarePericoloso')">
+                <img class="icon" src="assets/svg/indietro.svg">
+            </button>
+        </section>
+
+        <section class="articoloMedico" id="allergieIntolleranzeEceliachie">
+            <div class="headerArticolo">
+                <div class="headerContenuto">
+                    <div class="medico">
+                        <img class="foto" src="assets/img/sandri.png">
+                        <p class="nome">Dottore <br> Giancarlo Sandri</p>
+                    </div>
+                    <button class="chiudiArticolo" onclick="nascondereArticolo('allergieIntolleranzeEceliachie')">
+                        <svg class="icon" width="17" height="17" viewBox="0 0 17 17" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M15.9584 1.04159L15.9584 1.04155C15.8037 0.886886 15.5939 0.8 15.3751 0.8C15.1564 0.8 14.9466 0.886886 14.7918 1.04155L14.7918 1.04157L8.5 7.33339L2.20818 1.04157L2.20816 1.04155C2.05345 0.886886 1.84364 0.8 1.62488 0.8C1.40611 0.8 1.19631 0.886886 1.04159 1.04155L1.04155 1.04159C0.886886 1.19631 0.8 1.40611 0.8 1.62488C0.8 1.84364 0.886886 2.05345 1.04155 2.20816L1.04157 2.20818L7.33339 8.5L1.04157 14.7918L1.04155 14.7918C0.886886 14.9466 0.8 15.1564 0.8 15.3751C0.8 15.5939 0.886886 15.8037 1.04155 15.9584L1.04159 15.9584C1.19631 16.1131 1.40611 16.2 1.62488 16.2C1.84364 16.2 2.05345 16.1131 2.20816 15.9584L2.20818 15.9584L8.5 9.66661L14.7918 15.9584L14.7918 15.9584C14.9466 16.1131 15.1564 16.2 15.3751 16.2C15.5939 16.2 15.8037 16.1131 15.9584 15.9584L15.9584 15.9584C16.1131 15.8037 16.2 15.5939 16.2 15.3751C16.2 15.1564 16.1131 14.9466 15.9584 14.7918L15.9584 14.7918L9.66661 8.5L15.9584 2.20818L15.9584 2.20816C16.1131 2.05345 16.2 1.84364 16.2 1.62488C16.2 1.40611 16.1131 1.19631 15.9584 1.04159Z"
+                                fill="currentColor" stroke="currentColor" stroke-width="0.4" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <p class="titolo">“Allergie alimentari, intolleranze e celiachie”</p>
+            <div class="informazioni">
+                <img src="assets/img/odiseo-castrejon-1SPu0KT-Ejg-unsplash 1.png">
+                <br>
+                <br>
+                <p>
+                    <span class="didascalia">Allergia alimentare</span>
+                    <br>
+                    <br>
+                    Come quella respiratoria, l’allergia alimentare è un fenomeno caratterizzato
+                    dalla presenza di anticorpi rivolti verso sostanze contenute negli alimenti chiamate allergeni
+                    (pollini in caso di allergia respiratoria). L’allergia è una condizione “specifica”, cioè la
+                    presenza di allergeni in un alimento stimola, in soggetti predisposti, la produzione di anticorpi
+                    rivolti specificamente verso quell’allergene (es. se si è allergici al latte, l’allergene sarà
+                    rivolto esclusivamente verso le proteine del latte e non verso quelle dell’uovo). Nonostante ogni
+                    anticorpo sia rivolto verso un certo allergene, possono esistere anche delle pluri-allergie (es. al
+                    latte e all’uovo) e delle cosiddette “reazioni crociate”: un soggetto che soffre di allergia
+                    respiratoria, quindi allergico ai pollini, può anche essere allergico ad un alimento, perché quel
+                    tipo di antigene è presente sia nel polline di una pianta che in un alimento (es. betulla e mela).
+                    Ovviamente questi soggetti rappresentano una sfida maggiore per i medici e gli allergologi ma si
+                    possono fare dei test che permettono di evidenziare la presenza sia di allergie alimentari che
+                    respiratorie.La reazione tra l’anticorpo prodotto dal soggetto allergico e la sostanza che il
+                    paziente ingerisce determina una reazione caratterizzata una dilatazione dei vasi sanguigni e un
+                    abbassamento della pressione. Oltre all’abbassamento della pressione arteriosa che dà luogo
+                    allo shock anafilattico, l’evento più temibile delle allergie, altri sintomi possono essere rossore,
+                    eruzioni cutanee, prurito diffuso attorno alle labbra e all’interno della cavità orale e sintomi
+                    gastrointestinali.
+                </p>
+                <br>
+                <br>
+                <img src="assets/img/enoc-valenzuela-DRV85MuC-Ok-unsplash 1.png">
+                <br>
+                <br>
+                <p>
+                    <span class="didascalia">Intolleranza alimentare</span>
+                    <br>
+                    <br>
+                    A differenza delle allergie, le intolleranze non hanno alcuna relazione con il sistema immunitario.
+                    Si parla di intolleranza quando il nostro organismo ha difficoltà a digerire una determinata
+                    sostanza. Prendiamo come esempio l’intolleranza alimentare più comune, quella al lattosio: il
+                    lattosio è uno zucchero del latte presente in tutti i mammiferi e normalmente non dà problemi, ma
+                    per digerirlo e necessaria una molecola in grado di scindere i due zuccheri che compongono il
+                    lattosio. Se questa molecola non si scinde, si avranno dunque gonfiore addominale e diarrea causati
+                    da problemi di digestione. L’alimento andrà comunque eliminato ma, rispetto all’allergia, si ha un
+                    quadro meno grave.Il latte, in particolare, può generare sia allergia che intolleranza: un soggetto
+                    può quindi essere intollerante al lattosio (30-40% della popolazione) e allo stesso tempo allergico
+                    alle proteine del latte. Bisogna saper distinguere quindi le intolleranze, che si risolvono
+                    assumendo prodotti senza lattosio facilmente reperibili nei supermercati, dalle allergie, in cui è
+                    necessario invece eliminare totalmente l’alimento.
+                    <br>
+                    <br>
+                    <span class="didascalia">Celiachia</span>
+                    <br>
+                    <br>
+                    Non è raro nella quotidianità che la celiachia venga associata all’allergia. È bene quindi chiarire
+                    che la celiachia è una malattia autoimmune e che non si verifica a causa dell’incontro tra allergene
+                    e anticorpo e che è caratterizzata dall’assenza di villi intestinali, cioè delle protuberanze
+                    essenziali per l’assorbimento delle sostanze nutritive. I celiaci devono stare ovviamente attenti a
+                    non assumere glutine, ma non si verificherà mai lo shock anafilattico, tipico delle allergie, si
+                    potrà invece soffrire di diarrea, dolore e gonfiore addominale, anemia ed osteoporosi.
+                </p>
+            </div>
+            <button class="indietro" onclick="nascondereArticolo('allergieIntolleranzeEceliachie')">
+                <img class="icon" src="assets/svg/indietro.svg">
+            </button>
+        </section>
+
+        <section class="articoloMedico" id="modelloMediterraneoIlPiuCompleto">
+            <div class="headerArticolo">
+                <div class="headerContenuto">
+                    <div class="medico">
+                        <img class="foto" src="assets/img/elisabetta.png">
+                        <p class="nome">Dottoressa <br> Elisabetta Bernardi</p>
+                    </div>
+                    <button class="chiudiArticolo" onclick="nascondereArticolo('modelloMediterraneoIlPiuCompleto')">
+                        <svg class="icon" width="17" height="17" viewBox="0 0 17 17" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M15.9584 1.04159L15.9584 1.04155C15.8037 0.886886 15.5939 0.8 15.3751 0.8C15.1564 0.8 14.9466 0.886886 14.7918 1.04155L14.7918 1.04157L8.5 7.33339L2.20818 1.04157L2.20816 1.04155C2.05345 0.886886 1.84364 0.8 1.62488 0.8C1.40611 0.8 1.19631 0.886886 1.04159 1.04155L1.04155 1.04159C0.886886 1.19631 0.8 1.40611 0.8 1.62488C0.8 1.84364 0.886886 2.05345 1.04155 2.20816L1.04157 2.20818L7.33339 8.5L1.04157 14.7918L1.04155 14.7918C0.886886 14.9466 0.8 15.1564 0.8 15.3751C0.8 15.5939 0.886886 15.8037 1.04155 15.9584L1.04159 15.9584C1.19631 16.1131 1.40611 16.2 1.62488 16.2C1.84364 16.2 2.05345 16.1131 2.20816 15.9584L2.20818 15.9584L8.5 9.66661L14.7918 15.9584L14.7918 15.9584C14.9466 16.1131 15.1564 16.2 15.3751 16.2C15.5939 16.2 15.8037 16.1131 15.9584 15.9584L15.9584 15.9584C16.1131 15.8037 16.2 15.5939 16.2 15.3751C16.2 15.1564 16.1131 14.9466 15.9584 14.7918L15.9584 14.7918L9.66661 8.5L15.9584 2.20818L15.9584 2.20816C16.1131 2.05345 16.2 1.84364 16.2 1.62488C16.2 1.40611 16.1131 1.19631 15.9584 1.04159Z"
+                                fill="currentColor" stroke="currentColor" stroke-width="0.4" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <p class="titolo">"Modello mediterraneo, il più completo"</p>
+            <div class="informazioni">
+                <img src="assets/img/meditterraneo.png">
+                <br>
+                <br>
+                <p>
+                    "È molto importante seguire un modello alimentare mediterraneo, che è un modello alimentare onnivoro
+                    che non esclude alcun
+                    alimento ma sono tutti inclusi con le giuste proporzioni". Così Elisabetta Bernardi, biologa,
+                    nutrizionista, docente di Biologia della nutrizione presso l’università degli studi di Bari e
+                    autrice del libro "Mangiare secondo la scienza", a margine dell’evento 'Cosa significa mangiare
+                    secondo natura?' che si è tenuto a Roma.
+                    <br>
+                    <br>
+                    "Questo modello alimentare permette di avere una un’alimentazione completa dal punto di vista
+                    nutrizionale e di non avere carenze - prosegue l’esperta - come per esempio le carenze di ferro e di
+                    zinco che possono sperimentarsi se si esclude la carne, ma permette anche di avere delle sostanze
+                    protettive recentemente è stata scoperta una una sostanza nella carne e nel latte dei ruminanti
+                    l’acido trans vaccenico, una sostanza in grado di proteggere il nostro organismo e di migliorare
+                    l’azione immunitaria contro i tumori del colon e della pelle".
+                </p>
+            </div>
+            <button class="indietro" onclick="nascondereArticolo('modelloMediterraneoIlPiuCompleto')">
+                <img class="icon" src="assets/svg/indietro.svg">
+            </button>
+        </section>
     </main>
 
     <div class="menu">
@@ -244,6 +457,7 @@
 
     <div class="bar"></div>
 
+    <script src="assets/js/community.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js"></script>
     <script>
         // Initialize Glide.js

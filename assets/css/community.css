@@ -187,3 +187,111 @@
 .community .parereMedici .retiSocialiContenuto .retiSociali .reteSociale:hover .icon {
   color: var(--roso);
 }
+.community .articoloMedico {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  background-color: var(--nero);
+  top: 0;
+  z-index: 100;
+  overflow-y: scroll;
+  padding-bottom: 110px;
+  display: none;
+  opacity: 0;
+}
+.community .articoloMedico.attivato {
+  display: block;
+}
+.community .articoloMedico.mostrare {
+  opacity: 1;
+  animation: animazioneMostrareArticolo;
+  animation-duration: 0.5s;
+}
+.community .articoloMedico.nascondere {
+  opacity: 0;
+  animation: animazioneNascondereArticolo;
+  animation-duration: 0.5s;
+}
+.community .articoloMedico .headerArticolo {
+  padding: 26px 38px 0 38px;
+}
+.community .articoloMedico .headerArticolo .headerContenuto {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--roso);
+  padding-bottom: 47px;
+}
+.community .articoloMedico .headerArticolo .headerContenuto .medico {
+  display: flex;
+  align-items: center;
+  gap: 19px;
+}
+.community .articoloMedico .headerArticolo .headerContenuto .medico .foto {
+  height: 77px;
+  width: 77px;
+  object-fit: cover;
+  gap: 19px;
+}
+.community .articoloMedico .headerArticolo .headerContenuto .medico .nome {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 19.53px;
+  color: var(--beige);
+}
+.community .articoloMedico .headerArticolo .headerContenuto .chiudiArticolo {
+  background-color: #0000;
+  border: none;
+  padding: 0;
+}
+.community .articoloMedico .headerArticolo .headerContenuto .chiudiArticolo .icon {
+  color: var(--beige);
+}
+.community .articoloMedico .titolo {
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 27.83px;
+  color: var(--beige);
+  padding: 38px;
+}
+.community .articoloMedico .informazioni {
+  padding: 0 38px;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 23.44px;
+  color: var(--beige);
+}
+.community .articoloMedico .informazioni .didascalia {
+  font-weight: 900;
+}
+.community .articoloMedico .informazioni ul {
+  padding-left: 25px;
+}
+.community .articoloMedico .informazioni img {
+  width: calc(100% + 44px);
+  margin: 0 -22px;
+  border-radius: 30px;
+  overflow: hidden;
+}
+.community .articoloMedico .indietro {
+  background-color: #0000;
+  padding: 38px;
+  border: none;
+}
+@keyframes animazioneMostrareArticolo {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes animazioneNascondereArticolo {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
