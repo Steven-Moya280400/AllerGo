@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <Title>AllerGo</Title>
+    <link rel="icon" type="image/png" href="assets/svg/logo.svg" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <link href="assets/css/fonts.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/css/personalizzazione.css" rel="stylesheet">
+</head>
+
+<body class="nero">
+    <main class="personalizzazione">
+        <div class="contenitoreM">
+            <div class="profilo">
+                <div class="inizialeContenuto">
+                    <span class="iniziale">C</span>
+                </div>
+                <p class="nome">Christian</p>
+                <a class="chiudi" href="schede.html">
+                    <svg class="icon" width="17" height="17" viewBox="0 0 17 17" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M15.9584 1.04159L15.9584 1.04155C15.8037 0.886886 15.5939 0.8 15.3751 0.8C15.1564 0.8 14.9466 0.886886 14.7918 1.04155L14.7918 1.04157L8.5 7.33339L2.20818 1.04157L2.20816 1.04155C2.05345 0.886886 1.84364 0.8 1.62488 0.8C1.40611 0.8 1.19631 0.886886 1.04159 1.04155L1.04155 1.04159C0.886886 1.19631 0.8 1.40611 0.8 1.62488C0.8 1.84364 0.886886 2.05345 1.04155 2.20816L1.04157 2.20818L7.33339 8.5L1.04157 14.7918L1.04155 14.7918C0.886886 14.9466 0.8 15.1564 0.8 15.3751C0.8 15.5939 0.886886 15.8037 1.04155 15.9584L1.04159 15.9584C1.19631 16.1131 1.40611 16.2 1.62488 16.2C1.84364 16.2 2.05345 16.1131 2.20816 15.9584L2.20818 15.9584L8.5 9.66661L14.7918 15.9584L14.7918 15.9584C14.9466 16.1131 15.1564 16.2 15.3751 16.2C15.5939 16.2 15.8037 16.1131 15.9584 15.9584L15.9584 15.9584C16.1131 15.8037 16.2 15.5939 16.2 15.3751C16.2 15.1564 16.1131 14.9466 15.9584 14.7918L15.9584 14.7918L9.66661 8.5L15.9584 2.20818L15.9584 2.20816C16.1131 2.05345 16.2 1.84364 16.2 1.62488C16.2 1.40611 16.1131 1.19631 15.9584 1.04159Z"
+                            fill="currentColor" stroke="currentColor" stroke-width="0.4" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div id="ciglia" class="ciglia">
+            <div class="ciglio attivato" onclick="cambiaCiglio('attivato');">
+                <p class="testo" id="ciglioAttivatoTesto">Scheda</p>
+            </div>
+            <div class="ciglio" onclick="cambiaCiglio();">
+                <p class="testo" id="ciglioTesto">Prefereti</p>
+            </div>
+        </div>
+
+        <div class="ciglioContenuto attivato mostrare" id="schedaContenuto">
+            <div class="contenitoreM">
+                <div class="riepilogoAllergie">
+                    <p class="testo">Le tua allergie</p>
+                    <div class="allergiaSelezionata attivato">
+                        <div class="allergiaContenuto">
+                            <button class="allergiaPulsannte attivato">
+                                <img src="assets/svg/arachidi.svg">
+                            </button>
+                            <p class="nomeAllergia">Arachidi</p>
+                            <img class="rimuovereAllergia" src="assets/svg/x.svg">
+                        </div>
+
+                        <div class="allergiaContenuto">
+                            <button class="allergiaPulsannte attivato">
+                                <img src="assets/svg/senape.svg">
+                            </button>
+                            <p class="nomeAllergia">Senape</p>
+                            <img class="rimuovereAllergia" src="assets/svg/x.svg">
+                        </div>
+
+                        <button class="ulteriorePulsannte">
+                            <svg class="icon" width="31" height="31" viewBox="0 0 31 31" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M17.1833 13.8167H18.0833H28.4167C28.8631 13.8167 29.2913 13.994 29.607 14.3097C29.9226 14.6254 30.1 15.0536 30.1 15.5C30.1 15.9464 29.9226 16.3746 29.607 16.6903C29.2913 17.006 28.8631 17.1833 28.4167 17.1833H18.0833H17.1833V18.0833V28.4167C17.1833 28.8631 17.006 29.2913 16.6903 29.607C16.3746 29.9226 15.9464 30.1 15.5 30.1C15.0536 30.1 14.6254 29.9226 14.3097 29.607C13.994 29.2913 13.8167 28.8631 13.8167 28.4167V18.0833V17.1833H12.9167H2.58333C2.13688 17.1833 1.70872 17.006 1.39304 16.6903L0.762702 17.3206L1.39304 16.6903C1.07735 16.3746 0.9 15.9464 0.9 15.5C0.9 15.0536 1.07735 14.6254 1.39304 14.3097C1.70872 13.994 2.13689 13.8167 2.58333 13.8167H12.9167H13.8167V12.9167V2.58333C13.8167 2.13689 13.994 1.70872 14.3097 1.39304C14.6254 1.07735 15.0536 0.9 15.5 0.9C15.9464 0.9 16.3746 1.07735 16.6903 1.39304L17.3206 0.762702L16.6903 1.39304C17.006 1.70872 17.1833 2.13688 17.1833 2.58333V12.9167V13.8167Z"
+                                    fill="currentColor" stroke="none" stroke-width="1.8" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="riepilogoAllergie">
+                    <p class="testo">Le tue preferenze alimentari</p>
+                    <div class="allergiaSelezionata attivato">
+                        <div class="allergiaContenuto">
+                            <button class="allergiaPulsannte attivato">
+                                <img src="assets/svg/halal.svg">
+                            </button>
+                            <p class="nomeAllergia">Halal</p>
+                            <img class="rimuovereAllergia" src="assets/svg/x.svg">
+                        </div>
+
+                        <button class="ulteriorePulsannte">
+                            <svg class="icon" width="31" height="31" viewBox="0 0 31 31" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M17.1833 13.8167H18.0833H28.4167C28.8631 13.8167 29.2913 13.994 29.607 14.3097C29.9226 14.6254 30.1 15.0536 30.1 15.5C30.1 15.9464 29.9226 16.3746 29.607 16.6903C29.2913 17.006 28.8631 17.1833 28.4167 17.1833H18.0833H17.1833V18.0833V28.4167C17.1833 28.8631 17.006 29.2913 16.6903 29.607C16.3746 29.9226 15.9464 30.1 15.5 30.1C15.0536 30.1 14.6254 29.9226 14.3097 29.607C13.994 29.2913 13.8167 28.8631 13.8167 28.4167V18.0833V17.1833H12.9167H2.58333C2.13688 17.1833 1.70872 17.006 1.39304 16.6903L0.762702 17.3206L1.39304 16.6903C1.07735 16.3746 0.9 15.9464 0.9 15.5C0.9 15.0536 1.07735 14.6254 1.39304 14.3097C1.70872 13.994 2.13689 13.8167 2.58333 13.8167H12.9167H13.8167V12.9167V2.58333C13.8167 2.13689 13.994 1.70872 14.3097 1.39304C14.6254 1.07735 15.0536 0.9 15.5 0.9C15.9464 0.9 16.3746 1.07735 16.6903 1.39304L17.3206 0.762702L16.6903 1.39304C17.006 1.70872 17.1833 2.13688 17.1833 2.58333V12.9167V13.8167Z"
+                                    fill="currentColor" stroke="none" stroke-width="1.8" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ciglioContenuto" id="preferetiContenuto">
+            <div class="ricette">
+                <p class="titoloRicette">Le tue ricette</p>
+                <div class="elencoRicette">
+                    <div class="ricetta">
+                        <img class="foto" src="assets/img/cheescake.png">
+                        <div class="infoRicetta">
+                            <p class="nome">Cheescake <br> allo yogurt </p>
+                            <p class="descrizione">Senza latte, uova, <br> senape, arachidi</p>
+                        </div>
+                    </div>
+                    <div class="ricetta">
+                        <img class="foto" src="assets/img/crocchette.png">
+                        <div class="infoRicetta">
+                            <p class="nome">Crocchette <br> di sedano </p>
+                            <p class="descrizione">Senza latte e uova</p>
+                        </div>
+                    </div>
+                    <div class="ricetta">
+                        <img class="foto" src="assets/img/risotto.png">
+                        <div class="infoRicetta">
+                            <p class="nome">Risotto <br> alla zucca </p>
+                            <p class="descrizione">Per dieta Halal</p>
+                        </div>
+                    </div>
+                    <div class="ricetta">
+                        <img class="foto" src="assets/img/torta.png">
+                        <div class="infoRicetta">
+                            <p class="nome">Torta <br> all' arancia </p>
+                            <p class="descrizione">Senza: latte, uova, <br> senape, arachidi.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="articoli">
+                <p class="titoloArticoli">Le tuop articoli</p>
+                <div class="elencoArticoli">
+                    <div class="articolo">
+                        <p class="titolo">“Quando il cibo può diventare pericoloso?”</p>
+                        <p class="autore">Dottore Michele Malaguarnera</p>
+                    </div>
+                    <div class="articolo">
+                        <p class="titolo">“Modello mediterraneo, il più completo”</p>
+                        <p class="autore">Dottoressa Elisabetta Bernardi</p>
+                    </div>
+                    <div class="articolo">
+                        <p class="titolo">“Applicazione della dieta chetogenica”</p>
+                        <p class="autore">Dietologo Valerio La Pinta</p>
+                    </div>
+                    <div class="articolo">
+                        <p class="titolo">“Perchè sono importanti le proteine”</p>
+                        <p class="autore">Dottore Luigi Minucci</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="bar"></div>
+    <script src="assets/js/personalizzazione.js"></script>
+</body>
+
+</html>

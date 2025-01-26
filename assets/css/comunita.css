@@ -1,0 +1,309 @@
+.comunita .parereMedici {
+  padding-bottom: 110px;
+}
+.comunita .parereMedici .titolo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 26px 38px 0 38px;
+  width: 100%;
+  margin-bottom: 17px;
+}
+.comunita .parereMedici .titolo .testo {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26.04px;
+}
+.comunita .parereMedici .titolo .profilo {
+  background-color: var(--roso);
+  height: 42px;
+  width: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+.comunita .parereMedici .titolo .profilo .utenteIniziale {
+  font-family: 'Blenny';
+  font-size: 35px;
+  color: var(--beige);
+}
+.comunita .parereMedici .opinioni {
+  display: flex;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  padding: 0 16px;
+  gap: 12px;
+}
+.comunita .parereMedici .opinioni::-webkit-scrollbar {
+  display: none;
+}
+.comunita .parereMedici .opinioni .opinione {
+  min-width: 236px;
+  background-color: var(--nero);
+  border-radius: 30px;
+  padding: 22px 19px;
+  position: relative;
+}
+.comunita .parereMedici .opinioni .opinione .headerOpinione {
+  display: flex;
+  align-items: flex-end;
+  gap: 19px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--roso);
+  margin-bottom: 14px;
+}
+.comunita .parereMedici .opinioni .opinione .headerOpinione .foto {
+  width: 77px;
+  height: 77px;
+  object-fit: cover;
+}
+.comunita .parereMedici .opinioni .opinione .headerOpinione .nome {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 18.23px;
+  color: var(--beige);
+}
+.comunita .parereMedici .opinioni .opinione .citazione {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 27.83px;
+  color: var(--beige);
+}
+.comunita .parereMedici .opinioni .opinione .marcatore {
+  color: var(--beige);
+  position: absolute;
+  top: 22px;
+  right: 19px;
+  transition: 0.3s;
+}
+.comunita .parereMedici .opinioni .opinione .marcatore:hover {
+  color: var(--roso);
+}
+.comunita .parereMedici .ricette {
+  margin: 25px 0 31px 0;
+}
+.comunita .parereMedici .ricette .titoloRicette {
+  font-weight: 700;
+  line-height: 26.04px;
+  font-size: 20px;
+  margin-bottom: 30px;
+  padding: 0 38px;
+}
+.comunita .parereMedici .ricette .glide {
+  padding-bottom: 16px;
+}
+.comunita .parereMedici .ricette .ricettaContenuto {
+  padding: 0 16px;
+}
+.comunita .parereMedici .ricette .ricettaContenuto .ricetta {
+  background-color: var(--nero);
+  width: 100%;
+  border-radius: 30px;
+  padding: 8px 27px 8px 7px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  position: relative;
+}
+.comunita .parereMedici .ricette .ricettaContenuto .ricetta .foto {
+  height: 143px;
+  width: 135px;
+  object-fit: cover;
+}
+.comunita .parereMedici .ricette .ricettaContenuto .ricetta .infoRicetta .nome {
+  font-weight: 700;
+  line-height: 27.83px;
+  font-size: 26px;
+  color: var(--beige);
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--roso);
+}
+.comunita .parereMedici .ricette .ricettaContenuto .ricetta .infoRicetta .descrizione {
+  font-weight: 300;
+  line-height: 18.23px;
+  font-size: 14px;
+  color: var(--beige);
+  margin-top: 8px;
+  height: 28px;
+  overflow: visible;
+}
+.comunita .parereMedici .ricette .ricettaContenuto .ricetta .marcatore {
+  color: var(--beige);
+  position: absolute;
+  top: 39px;
+  right: 28px;
+  transition: 0.3s;
+}
+.comunita .parereMedici .ricette .ricettaContenuto .ricetta .marcatore:hover {
+  color: var(--roso);
+}
+.comunita .parereMedici .ricette .glide__bullets {
+  bottom: 0;
+}
+.comunita .parereMedici .ricette .glide__bullets .glide__bullet {
+  width: 13.05px;
+  height: 5px;
+  background-color: #00000033;
+  border-radius: 25px;
+}
+.comunita .parereMedici .ricette .glide__bullets .glide__bullet--active {
+  background-color: var(--roso);
+}
+.comunita .parereMedici .retiSocialiContenuto .titoloRetiSociali {
+  font-weight: 400;
+  line-height: 19.53px;
+  font-size: 15px;
+  margin-bottom: 8px;
+  text-align: center;
+  color: #00000080;
+}
+.comunita .parereMedici .retiSocialiContenuto .retiSociali {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+}
+.comunita .parereMedici .retiSocialiContenuto .retiSociali .reteSociale {
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+  background-color: #0000001A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+.comunita .parereMedici .retiSocialiContenuto .retiSociali .reteSociale .icon {
+  color: var(--nero);
+  transition: 0.3s;
+}
+.comunita .parereMedici .retiSocialiContenuto .retiSociali .reteSociale:hover {
+  background-color: var(--nero);
+}
+.comunita .parereMedici .retiSocialiContenuto .retiSociali .reteSociale:hover .icon {
+  color: var(--roso);
+}
+.comunita .articolo {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  background-color: var(--nero);
+  top: 0;
+  z-index: 100;
+  overflow-y: scroll;
+  padding-bottom: 110px;
+  display: none;
+  opacity: 0;
+}
+.comunita .articolo.attivato {
+  display: block;
+}
+.comunita .articolo.mostrare {
+  opacity: 1;
+  animation: animazioneMostrareArticolo;
+  animation-duration: 0.5s;
+}
+.comunita .articolo.nascondere {
+  opacity: 0;
+  animation: animazioneNascondereArticolo;
+  animation-duration: 0.5s;
+}
+.comunita .articolo .headerArticolo {
+  padding: 26px 38px 0 38px;
+}
+.comunita .articolo .headerArticolo .headerContenuto {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--roso);
+  padding-bottom: 47px;
+}
+.comunita .articolo .headerArticolo .headerContenuto .nomeDellaRicetta {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 27.83px;
+  color: var(--beige);
+}
+.comunita .articolo .headerArticolo .headerContenuto .medico {
+  display: flex;
+  align-items: center;
+  gap: 19px;
+}
+.comunita .articolo .headerArticolo .headerContenuto .medico .foto {
+  height: 77px;
+  width: 77px;
+  object-fit: cover;
+  gap: 19px;
+}
+.comunita .articolo .headerArticolo .headerContenuto .medico .nome {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 19.53px;
+  color: var(--beige);
+}
+.comunita .articolo .headerArticolo .headerContenuto .chiudiArticolo {
+  background-color: #0000;
+  border: none;
+  padding: 0;
+}
+.comunita .articolo .headerArticolo .headerContenuto .chiudiArticolo .icon {
+  color: var(--beige);
+}
+.comunita .articolo .titolo {
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 27.83px;
+  color: var(--beige);
+  padding: 38px;
+}
+.comunita .articolo .informazioni {
+  padding: 0 38px;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 23.44px;
+  color: var(--beige);
+}
+.comunita .articolo .informazioni .didascalia {
+  font-weight: 900;
+}
+.comunita .articolo .informazioni ul {
+  padding-left: 25px;
+}
+.comunita .articolo .informazioni img {
+  width: calc(100% + 44px);
+  margin: 0 -22px;
+  border-radius: 30px;
+  overflow: hidden;
+}
+.comunita .articolo .indietro {
+  background-color: #0000;
+  padding: 38px;
+  border: none;
+}
+.comunita .articolo.articoloRicette .headerContenuto {
+  padding-bottom: 27px;
+}
+.comunita .articolo.articoloRicette .informazioni img {
+  width: 100%;
+  margin: 0;
+}
+@keyframes animazioneMostrareArticolo {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes animazioneNascondereArticolo {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

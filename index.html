@@ -10,17 +10,17 @@
     <link href="assets/css/main.css" rel="stylesheet">
 </head>
 
-<body class="beige">
+<body id="body" class="beige">
     <main>
         <section id="logoAnimazione" class="logoAnimazione attivato">
             <img class="logo" src="assets/gif/Logo Animation.gif">
         </section>
 
         <section id="inizio" class="inizio">
-            <img class="animazione" src="assets/gif/Intro animation.gif">
+            <img class="animazione" src="assets/gif/animazione intro presentazione.gif">
 
             <div class="contenitore contenitorePulsanti">
-                <a class="pulsante neroBeige" href="inizioSessione.html">Iniziamo</a>
+                <a class="pulsante beige" href="inizioSessione.html">Iniziamo</a>
             </div>
 
             <div class="bar"></div>
@@ -31,6 +31,7 @@
             setTimeout(function () {
                 document.getElementById("logoAnimazione").classList.remove("attivato");
                 document.getElementById("inizio").classList.add("attivato");
+                document.getElementById("body").classList.add('nero');
                 document.getElementById("inizio").classList.add("mostrare");
             }, 2500);
         });

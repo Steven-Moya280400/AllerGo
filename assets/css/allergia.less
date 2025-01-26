@@ -124,49 +124,6 @@
             }
         }
 
-        .allergiaContenuto {
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-            .allergiaPulsannte {
-                border: none;
-                background-color: #FCF3E61A;
-                border-radius: 20px;
-                width: 74.2px;
-                height: 74.2px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                margin-bottom: 14.8px;
-                transition: 0.3s;
-
-                &.attivato {
-                    background-color: var(--roso);
-                }
-
-                &:hover {
-                    background-color: var(--roso);
-                }
-            }
-
-            .nomeAllergia {
-                font-weight: 400;
-                font-size: 15px;
-                line-height: 19.53px;
-                color: var(--beige);
-                text-align: center;
-            }
-
-
-            .rimuovereAllergia {
-                position: absolute;
-                top: -10px;
-                right: -15px;
-            }
-        }
-
         .contenutoDiapositiva {
             width: 100%;
             height: calc(100vh - 90px);
@@ -249,22 +206,6 @@
                 justify-items: center;
                 gap: 20.2px;
                 margin-bottom: 15px;
-            }
-
-            .allergiaSelezionata {
-                margin: 0 0 32.8px 0;
-
-                width: 100%;
-                justify-content: flex-start;
-                display: none;
-
-                &.attivato {
-                    display: flex;
-
-                    &+.testoInfo {
-                        margin-top: 0;
-                    }
-                }
             }
         }
 

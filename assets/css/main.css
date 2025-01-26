@@ -170,3 +170,52 @@ body.nero .inizioSessione .inizioSessioneContenuto .ritorno .icon {
 .menu .menuPulsante.attivato .icon {
   color: var(--roso);
 }
+.allergiaContenuto {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.allergiaContenuto .allergiaPulsannte {
+  border: none;
+  background-color: #FCF3E61A;
+  border-radius: 20px;
+  width: 74.2px;
+  height: 74.2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14.8px;
+  transition: 0.3s;
+}
+.allergiaContenuto .allergiaPulsannte.attivato {
+  background-color: var(--roso);
+}
+.allergiaContenuto .allergiaPulsannte:hover {
+  background-color: var(--roso);
+}
+.allergiaContenuto .nomeAllergia {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 19.53px;
+  color: var(--beige);
+  text-align: center;
+}
+.allergiaContenuto .rimuovereAllergia {
+  position: absolute;
+  top: -10px;
+  right: -15px;
+}
+.allergiaSelezionata {
+  margin: 0 0 32.8px 0;
+  width: 100%;
+  justify-content: flex-start;
+  display: none;
+  gap: 45.8px;
+}
+.allergiaSelezionata.attivato {
+  display: flex;
+}
+.allergiaSelezionata.attivato + .testoInfo {
+  margin-top: 0;
+}
