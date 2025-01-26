@@ -186,7 +186,7 @@
 .community .parereMedici .retiSocialiContenuto .retiSociali .reteSociale:hover .icon {
   color: var(--roso);
 }
-.community .articoloMedico {
+.community .articolo {
   position: fixed;
   height: 100vh;
   width: 100%;
@@ -198,23 +198,23 @@
   display: none;
   opacity: 0;
 }
-.community .articoloMedico.attivato {
+.community .articolo.attivato {
   display: block;
 }
-.community .articoloMedico.mostrare {
+.community .articolo.mostrare {
   opacity: 1;
   animation: animazioneMostrareArticolo;
   animation-duration: 0.5s;
 }
-.community .articoloMedico.nascondere {
+.community .articolo.nascondere {
   opacity: 0;
   animation: animazioneNascondereArticolo;
   animation-duration: 0.5s;
 }
-.community .articoloMedico .headerArticolo {
+.community .articolo .headerArticolo {
   padding: 26px 38px 0 38px;
 }
-.community .articoloMedico .headerArticolo .headerContenuto {
+.community .articolo .headerArticolo .headerContenuto {
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -222,61 +222,74 @@
   border-bottom: 1px solid var(--roso);
   padding-bottom: 47px;
 }
-.community .articoloMedico .headerArticolo .headerContenuto .medico {
+.community .articolo .headerArticolo .headerContenuto .nomeDellaRicetta {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 27.83px;
+  color: var(--beige);
+}
+.community .articolo .headerArticolo .headerContenuto .medico {
   display: flex;
   align-items: center;
   gap: 19px;
 }
-.community .articoloMedico .headerArticolo .headerContenuto .medico .foto {
+.community .articolo .headerArticolo .headerContenuto .medico .foto {
   height: 77px;
   width: 77px;
   object-fit: cover;
   gap: 19px;
 }
-.community .articoloMedico .headerArticolo .headerContenuto .medico .nome {
+.community .articolo .headerArticolo .headerContenuto .medico .nome {
   font-weight: 400;
   font-size: 15px;
   line-height: 19.53px;
   color: var(--beige);
 }
-.community .articoloMedico .headerArticolo .headerContenuto .chiudiArticolo {
+.community .articolo .headerArticolo .headerContenuto .chiudiArticolo {
   background-color: #0000;
   border: none;
   padding: 0;
 }
-.community .articoloMedico .headerArticolo .headerContenuto .chiudiArticolo .icon {
+.community .articolo .headerArticolo .headerContenuto .chiudiArticolo .icon {
   color: var(--beige);
 }
-.community .articoloMedico .titolo {
+.community .articolo .titolo {
   font-weight: 400;
   font-size: 26px;
   line-height: 27.83px;
   color: var(--beige);
   padding: 38px;
 }
-.community .articoloMedico .informazioni {
+.community .articolo .informazioni {
   padding: 0 38px;
   font-weight: 300;
   font-size: 18px;
   line-height: 23.44px;
   color: var(--beige);
 }
-.community .articoloMedico .informazioni .didascalia {
+.community .articolo .informazioni .didascalia {
   font-weight: 900;
 }
-.community .articoloMedico .informazioni ul {
+.community .articolo .informazioni ul {
   padding-left: 25px;
 }
-.community .articoloMedico .informazioni img {
+.community .articolo .informazioni img {
   width: calc(100% + 44px);
   margin: 0 -22px;
   border-radius: 30px;
   overflow: hidden;
 }
-.community .articoloMedico .indietro {
+.community .articolo .indietro {
   background-color: #0000;
   padding: 38px;
   border: none;
+}
+.community .articolo.articoloRicette .headerContenuto {
+  padding-bottom: 27px;
+}
+.community .articolo.articoloRicette .informazioni img {
+  width: 100%;
+  margin: 0;
 }
 @keyframes animazioneMostrareArticolo {
   0% {

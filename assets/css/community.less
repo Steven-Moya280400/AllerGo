@@ -227,7 +227,7 @@
         }
     }
 
-    .articoloMedico {
+    .articolo {
         position: fixed;
         height: 100vh;
         width: 100%;
@@ -265,6 +265,13 @@
                 align-items: center;
                 border-bottom: 1px solid var(--roso);
                 padding-bottom: 47px;
+
+                .nomeDellaRicetta {
+                    font-weight: 700;
+                    font-size: 26px;
+                    line-height: 27.83px;
+                    color: var(--beige);
+                }
 
                 .medico {
                     display: flex;
@@ -335,6 +342,19 @@
             background-color: #0000;
             padding: 38px;
             border: none;
+        }
+
+        &.articoloRicette{
+            .headerContenuto{
+                padding-bottom: 27px;
+            }
+
+            .informazioni {
+                img{
+                    width: 100%;
+                    margin: 0;
+                }
+            }
         }
     }
 }

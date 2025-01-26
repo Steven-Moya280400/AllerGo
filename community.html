@@ -115,7 +115,7 @@
                     <div class="glide__track" data-glide-el="track">
                         <ul class="glide__slides">
                             <li class="glide__slide">
-                                <div class="ricettaContenuto">
+                                <div class="ricettaContenuto" onclick="mostrareArticolo('fettuccineAlRagu')">
                                     <div class="ricetta">
                                         <img class="foto" src="assets/img/fettuccine.png">
                                         <div class="infoRicetta">
@@ -133,7 +133,7 @@
                             </li>
                             <li class="glide__slide">
                                 <div class="ricettaContenuto">
-                                    <div class="ricetta">
+                                    <div class="ricetta" onclick="mostrareArticolo('crocchetteDiSedano')">
                                         <img class="foto" src="assets/img/crocchette.png">
                                         <div class="infoRicetta">
                                             <p class="nome">Crocchette <br> di sedano</p>
@@ -150,7 +150,7 @@
                             </li>
                             <li class="glide__slide">
                                 <div class="ricettaContenuto">
-                                    <div class="ricetta">
+                                    <div class="ricetta" onclick="mostrareArticolo('cheescakeYogurt')">
                                         <img class="foto" src="assets/img/cheescake.png">
                                         <div class="infoRicetta">
                                             <p class="nome">Cheescake yogurt</p>
@@ -213,7 +213,7 @@
             </div>
         </section>
 
-        <section class="articoloMedico" id="quandoIlCiboPuoDiventarePericoloso">
+        <section class="articolo" id="quandoIlCiboPuoDiventarePericoloso">
             <div class="headerArticolo">
                 <div class="headerContenuto">
                     <div class="medico">
@@ -324,7 +324,7 @@
             </button>
         </section>
 
-        <section class="articoloMedico" id="allergieIntolleranzeEceliachie">
+        <section class="articolo" id="allergieIntolleranzeEceliachie">
             <div class="headerArticolo">
                 <div class="headerContenuto">
                     <div class="medico">
@@ -409,7 +409,7 @@
             </button>
         </section>
 
-        <section class="articoloMedico" id="modelloMediterraneoIlPiuCompleto">
+        <section class="articolo" id="modelloMediterraneoIlPiuCompleto">
             <div class="headerArticolo">
                 <div class="headerContenuto">
                     <div class="medico">
@@ -450,6 +450,270 @@
                 </p>
             </div>
             <button class="indietro" onclick="nascondereArticolo('modelloMediterraneoIlPiuCompleto')">
+                <img class="icon" src="assets/svg/indietro.svg">
+            </button>
+        </section>
+
+        <section class="articolo articoloRicette" id="fettuccineAlRagu">
+            <div class="headerArticolo">
+                <div class="headerContenuto">
+                    <p class="nomeDellaRicetta">Fettuccine al ragù </p>
+                    <button class="chiudiArticolo" onclick="nascondereArticolo('fettuccineAlRagu')">
+                        <svg class="icon" width="17" height="17" viewBox="0 0 17 17" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M15.9584 1.04159L15.9584 1.04155C15.8037 0.886886 15.5939 0.8 15.3751 0.8C15.1564 0.8 14.9466 0.886886 14.7918 1.04155L14.7918 1.04157L8.5 7.33339L2.20818 1.04157L2.20816 1.04155C2.05345 0.886886 1.84364 0.8 1.62488 0.8C1.40611 0.8 1.19631 0.886886 1.04159 1.04155L1.04155 1.04159C0.886886 1.19631 0.8 1.40611 0.8 1.62488C0.8 1.84364 0.886886 2.05345 1.04155 2.20816L1.04157 2.20818L7.33339 8.5L1.04157 14.7918L1.04155 14.7918C0.886886 14.9466 0.8 15.1564 0.8 15.3751C0.8 15.5939 0.886886 15.8037 1.04155 15.9584L1.04159 15.9584C1.19631 16.1131 1.40611 16.2 1.62488 16.2C1.84364 16.2 2.05345 16.1131 2.20816 15.9584L2.20818 15.9584L8.5 9.66661L14.7918 15.9584L14.7918 15.9584C14.9466 16.1131 15.1564 16.2 15.3751 16.2C15.5939 16.2 15.8037 16.1131 15.9584 15.9584L15.9584 15.9584C16.1131 15.8037 16.2 15.5939 16.2 15.3751C16.2 15.1564 16.1131 14.9466 15.9584 14.7918L15.9584 14.7918L9.66661 8.5L15.9584 2.20818L15.9584 2.20816C16.1131 2.05345 16.2 1.84364 16.2 1.62488C16.2 1.40611 16.1131 1.19631 15.9584 1.04159Z"
+                                fill="currentColor" stroke="currentColor" stroke-width="0.4" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="informazioni">
+                <br>
+                <br>
+                <img src="assets/img/fettuccineAlRagu.png">
+                <br>
+                <br>
+                <p>
+                    <span class="didascalia">Ingredienti</span>
+                    <br>
+                    <br>
+                    250 g Tagliatelle
+                    <br>
+                    <br>
+                    160 ml Acqua 
+                    <br>
+                    <br>
+                    150 g Vitello macinato Halal 
+                    <br>
+                    <br>
+                    150 g Manzo macinato Halal 
+                    <br>
+                    <br>
+                    40 g Carote, pelate e tritate
+                    <br>
+                    <br>
+                    40 g Sedano tritato 
+                    <br>
+                    <br>
+                    40 g Cipolla gialla
+                    <br>
+                    <br>
+                    90 g Passata di pomodoro 
+                    <br>
+                    <br>
+                    100 ml Vino rosso analcolico 
+                    <br>
+                    <br>
+                    50 g Parmigiano Halal, grattugiato 
+                    <br>
+                    <br>
+                    2 Foglie di alloro fresco
+                    <br>
+                    <br>
+                    A piacere Sale e pepe nero
+                    <br>
+                    <br>
+                    <span class="didascalia">Procedimiento</span>
+                    <br>
+                    <br>
+                    Scaldare l'olio in una casseruola a fuoco medio e soffriggere le verdure tritate e le foglie di
+                    alloro;
+                    <br>
+                    <br>
+                    Aggiungere il macinato di manzo e di vitello e alzare la fiamma a livello medio-alto in modo che si
+                    rosoli bene. Versare il vino rosso analcolico e farlo evaporare completamente. Ridurre la fiamma al
+                    minimo e aggiungere la passata di pomodoro. Salare e pepare, aggiungere 160 ml di acqua e cuocere a
+                    fuoco basso per circa 45 minuti;
+                    <br>
+                    <br>
+                    Portare a ebollizione una pentola d'acqua salata e cuocere le tagliatelle all'uovo al dente. Scolare
+                    la pasta;
+                    <br>
+                    <br>
+                    Trasferire le tagliatelle cotte nel ragù e farle saltare per amalgamarle. Cospargere con il
+                    Parmigiano Halal e servire.
+                </p>
+            </div>
+            <button class="indietro" onclick="nascondereArticolo('fettuccineAlRagu')">
+                <img class="icon" src="assets/svg/indietro.svg">
+            </button>
+        </section>
+
+        <section class="articolo articoloRicette" id="crocchetteDiSedano">
+            <div class="headerArticolo">
+                <div class="headerContenuto">
+                    <p class="nomeDellaRicetta">Crocchette di sedano</p>
+                    <button class="chiudiArticolo" onclick="nascondereArticolo('crocchetteDiSedano')">
+                        <svg class="icon" width="17" height="17" viewBox="0 0 17 17" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M15.9584 1.04159L15.9584 1.04155C15.8037 0.886886 15.5939 0.8 15.3751 0.8C15.1564 0.8 14.9466 0.886886 14.7918 1.04155L14.7918 1.04157L8.5 7.33339L2.20818 1.04157L2.20816 1.04155C2.05345 0.886886 1.84364 0.8 1.62488 0.8C1.40611 0.8 1.19631 0.886886 1.04159 1.04155L1.04155 1.04159C0.886886 1.19631 0.8 1.40611 0.8 1.62488C0.8 1.84364 0.886886 2.05345 1.04155 2.20816L1.04157 2.20818L7.33339 8.5L1.04157 14.7918L1.04155 14.7918C0.886886 14.9466 0.8 15.1564 0.8 15.3751C0.8 15.5939 0.886886 15.8037 1.04155 15.9584L1.04159 15.9584C1.19631 16.1131 1.40611 16.2 1.62488 16.2C1.84364 16.2 2.05345 16.1131 2.20816 15.9584L2.20818 15.9584L8.5 9.66661L14.7918 15.9584L14.7918 15.9584C14.9466 16.1131 15.1564 16.2 15.3751 16.2C15.5939 16.2 15.8037 16.1131 15.9584 15.9584L15.9584 15.9584C16.1131 15.8037 16.2 15.5939 16.2 15.3751C16.2 15.1564 16.1131 14.9466 15.9584 14.7918L15.9584 14.7918L9.66661 8.5L15.9584 2.20818L15.9584 2.20816C16.1131 2.05345 16.2 1.84364 16.2 1.62488C16.2 1.40611 16.1131 1.19631 15.9584 1.04159Z"
+                                fill="currentColor" stroke="currentColor" stroke-width="0.4" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="informazioni">
+                <br>
+                <br>
+                <img src="assets/img/crocchetteDiSedano.png">
+                <br>
+                <br>
+                <p>
+                    <span class="didascalia">Ingredienti</span>
+                    <br>
+                    <br>
+                    per 6 crocchette:
+                    <br>
+                    <br>
+                    Un mazzo di sedano con le foglie
+                    <br>
+                    <br>
+                    200 g di fiocchi d’avena
+                    <br>
+                    <br>
+                    1/2 bicchiere di latte di soia
+                    <br>
+                    <br>
+                    1/2 cucchiaino di curcuma
+                    <br>
+                    <br>
+                    un cucchiaio d’olio evo
+                    <br>
+                    <br>
+                    150 g di semi di sesamo
+                    <br>
+                    <br>
+                    sale
+                    <br>
+                    <br>
+                    pepe
+                    <br>
+                    <br>
+                    <span class="didascalia">Procedimiento</span>
+                    <br>
+                    <br>
+                    Tagliate il sedano a pezzetti e tritate fìgrossolanamente le foglie;
+                    <br>
+                    <br>
+                    Cuocete il sedano, ma non le foglie, a vapore per 6-7 minuti;
+                    <br>
+                    <br>
+                    Una volta raffreddato, frullate il sedano con le foglie e mescolatelo ai fiocchi d’avena
+                    precedentemente macinati e resi farina piuttosto grossolana, unite la curcuma, l’olio evo, il latte
+                    di soia, il sale e il pepe;
+                    <br>
+                    <br>
+                    Regolatevi con la farina; se il composto vi sembra ancora troppo mjolle, aggiungetene un po’ di più.
+                    Le crocchette non saranno mai troppo dure, dovrete lavorarle piuttosto morbide. Si unduriranno poi
+                    in cottura, per cui non esagerate con la farina;
+                    <br>
+                    <br>
+                    Passate le crocchette nei semi di sesamo e disponetele su una placca ricoperta di carta da forno;
+                    <br>
+                    <br>
+                    Cuocete le crocchette di sedano in forno già caldo a 200°C per 15-20 minuti, girandole a metà
+                    cottura;
+                    <br>
+                    <br>
+                    Servite le crocchette di sedano con salsa di pomodoro, hummus di ceci, maionese vegan, tapenade di
+                    verdure e un insalata fresca.
+                </p>
+            </div>
+            <button class="indietro" onclick="nascondereArticolo('crocchetteDiSedano')">
+                <img class="icon" src="assets/svg/indietro.svg">
+            </button>
+        </section>
+
+        <section class="articolo articoloRicette" id="cheescakeYogurt">
+            <div class="headerArticolo">
+                <div class="headerContenuto">
+                    <p class="nomeDellaRicetta">Cheescake yogurt</p>
+                    <button class="chiudiArticolo" onclick="nascondereArticolo('cheescakeYogurt')">
+                        <svg class="icon" width="17" height="17" viewBox="0 0 17 17" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M15.9584 1.04159L15.9584 1.04155C15.8037 0.886886 15.5939 0.8 15.3751 0.8C15.1564 0.8 14.9466 0.886886 14.7918 1.04155L14.7918 1.04157L8.5 7.33339L2.20818 1.04157L2.20816 1.04155C2.05345 0.886886 1.84364 0.8 1.62488 0.8C1.40611 0.8 1.19631 0.886886 1.04159 1.04155L1.04155 1.04159C0.886886 1.19631 0.8 1.40611 0.8 1.62488C0.8 1.84364 0.886886 2.05345 1.04155 2.20816L1.04157 2.20818L7.33339 8.5L1.04157 14.7918L1.04155 14.7918C0.886886 14.9466 0.8 15.1564 0.8 15.3751C0.8 15.5939 0.886886 15.8037 1.04155 15.9584L1.04159 15.9584C1.19631 16.1131 1.40611 16.2 1.62488 16.2C1.84364 16.2 2.05345 16.1131 2.20816 15.9584L2.20818 15.9584L8.5 9.66661L14.7918 15.9584L14.7918 15.9584C14.9466 16.1131 15.1564 16.2 15.3751 16.2C15.5939 16.2 15.8037 16.1131 15.9584 15.9584L15.9584 15.9584C16.1131 15.8037 16.2 15.5939 16.2 15.3751C16.2 15.1564 16.1131 14.9466 15.9584 14.7918L15.9584 14.7918L9.66661 8.5L15.9584 2.20818L15.9584 2.20816C16.1131 2.05345 16.2 1.84364 16.2 1.62488C16.2 1.40611 16.1131 1.19631 15.9584 1.04159Z"
+                                fill="currentColor" stroke="currentColor" stroke-width="0.4" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="informazioni">
+                <br>
+                <br>
+                <img src="assets/img/cheescakeYogurt.png">
+                <br>
+                <br>
+                <p>
+                    <span class="didascalia">Ingredienti</span>
+                    <br>
+                    <br>
+                    Ingredienti
+                    <br>
+                    <br>
+                    Yogurt magro (200 gr circa)
+                    <br>
+                    <br>
+                    1/2 succo di limone
+                    <br>
+                    <br>
+                    85 g farina di riso
+                    <br>
+                    <br>
+                    50 g farina di mandorle sgrassata 
+                    <br>
+                    <br>
+                    40 g eritritolo
+                    <br>
+                    <br>
+                    1/4 cucchiaino cannella in polvere
+                    <br>
+                    <br>
+                    5 g lievito per dolci
+                    <br>
+                    <br>
+                    250 ml latte di mandorle  
+                    <br>
+                    <br>
+                    10 g zucchero di fiori di cocco 
+                    <br>
+                    <br>
+                    <span class="didascalia">Procedimiento</span>
+                    <br>
+                    <br>
+                    Preriscaldare il forno a 170°, funzione statica;
+                    <br>
+                    <br>
+                    Mescolare bene lo yogurt e metterlo in una ciotola fonda e irrorare con il succo di limone; 
+                    <br>
+                    <br>
+                    In un contenitore capiente unire la farina di riso, la farina di mandorle sgrassata, l’eritritolo,
+                    la cannella, il cremor tartaro, le proteine in polvere se utilizzate, e mescolare bene;
+                    <br>
+                    <br>
+                    Aggiungere il latte di mandorle, l’aroma di vaniglia e mescolare bene fino a ottenere un composto
+                    liscio, senza grumi e piuttosto denso;
+                    <br>
+                    <br>
+                    Incorporare lo yogurt magro (lasciare qualche dose per decorare la superficie) e mescolare di nuovo;
+                    <br>
+                    <br>
+                    Versare il composto in una tortiera di 16 cm foderata con della carta da forno;
+                    <br>
+                    <br>
+                    Disporre sulla superficie una decorazione a piacere, cospargere con lo zucchero di fiori di cocco e
+                    infornare per 40/50 minuti (a cottura ultimata mettere il forno in funzione ventilato per 5
+                    minuti.);
+                    <br>
+                    <br>
+                    Fare sempre la “prova stecchino” prima di sfornare.
+                </p>
+            </div>
+            <button class="indietro" onclick="nascondereArticolo('cheescakeYogurt')">
                 <img class="icon" src="assets/svg/indietro.svg">
             </button>
         </section>
