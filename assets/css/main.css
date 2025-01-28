@@ -112,12 +112,11 @@ body.nero .inizioSessione .inizioSessioneContenuto .ritorno .icon {
 }
 .inizio .animazione {
   width: calc(100vw - 8px);
-  height: calc(100vh - 140px);
+  height: calc(100vh - 191px);
   object-fit: contain;
 }
 .inizio .contenitorePulsanti {
-  position: absolute;
-  bottom: 85px;
+  min-height: 122px;
 }
 .bar {
   width: 134px;
@@ -144,6 +143,7 @@ body.nero .inizioSessione .inizioSessioneContenuto .ritorno .icon {
   align-items: center;
   justify-content: space-around;
   z-index: 100;
+  max-width: 358px;
 }
 .menu .menuPulsante {
   height: 42px;

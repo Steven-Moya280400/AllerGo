@@ -112,6 +112,9 @@
   width: 135px;
   object-fit: cover;
 }
+.comunita .parereMedici .ricette .ricettaContenuto .ricetta .infoRicetta {
+  width: 100%;
+}
 .comunita .parereMedici .ricette .ricettaContenuto .ricetta .infoRicetta .nome {
   font-weight: 700;
   line-height: 27.83px;
