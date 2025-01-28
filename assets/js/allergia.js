@@ -56,12 +56,46 @@ function indietroDiapositiva(diapositiva) {
     }
 }
 
-function selezionaAllergia() {
-    document.getElementById('allergiaSelezionata').classList.add('attivato')
+function selezionaAllergia(nome, icon) {
+    const allergia = document.getElementById('allergia_' + nome.replaceAll(' ', ''));
+
+    if (allergia == null || allergia == undefined) {
+        const allergiaSelezionata = document.getElementById('allergiaSelezionata');
+
+        const allergiaContenuto = document.createElement('div');
+        allergiaContenuto.className = 'allergiaContenuto';
+        allergiaContenuto.id = 'allergia_' + nome.replaceAll(' ', '');
+
+        const allergiaPulsannte = document.createElement('button');
+        allergiaPulsannte.className = 'allergiaPulsannte attivato';
+
+        const imgArachidi = document.createElement('img');
+        imgArachidi.src = icon;
+        allergiaPulsannte.appendChild(imgArachidi);
+
+        const nomeAllergia = document.createElement('p');
+        nomeAllergia.className = 'nomeAllergia';
+        nomeAllergia.textContent = nome;
+
+        const imgRimuovere = document.createElement('img');
+        imgRimuovere.className = 'rimuovereAllergia';
+        imgRimuovere.src = 'assets/svg/x.svg';
+        imgRimuovere.setAttribute('onclick', "rimuovereAllergia('allergia_" + nome.replaceAll(' ', '') + "');");
+
+        allergiaContenuto.appendChild(allergiaPulsannte);
+        allergiaContenuto.appendChild(nomeAllergia);
+        allergiaContenuto.appendChild(imgRimuovere);
+        allergiaSelezionata.appendChild(allergiaContenuto);
+        allergiaSelezionata.classList.add('attivato')
+    }
 }
 
-function rimuovereAllergia() {
-    document.getElementById('allergiaSelezionata').classList.remove('attivato')
+function rimuovereAllergia(id) {
+    document.getElementById(id).outerHTML = "";
+    const allergiaSelezionata = document.getElementById('allergiaSelezionata');
+    if (!allergiaSelezionata || allergiaSelezionata.innerHTML.trim() === '') {
+        allergiaSelezionata.classList.remove('attivato')
+    }
 }
 
 function cercareAllergia() {
@@ -74,10 +108,44 @@ function ricercaRavvicinata() {
     document.getElementById('navMenuAllergia').classList.remove('nascondere')
 }
 
-function selezionaPreferenzeAlimentari() {
-    document.getElementById('preferenzeAlimentariSelezionata').classList.add('attivato')
+function selezionaPreferenzeAlimentari(nome, icon) {
+    const preferenze = document.getElementById('allergia_' + nome.replaceAll(' ', ''));
+
+    if (preferenze == null || preferenze == undefined) {
+        const preferenzeAlimentariSelezionata = document.getElementById('preferenzeAlimentariSelezionata');
+
+        const allergiaContenuto = document.createElement('div');
+        allergiaContenuto.className = 'allergiaContenuto';
+        allergiaContenuto.id = 'allergia_' + nome.replaceAll(' ', '');
+
+        const allergiaPulsannte = document.createElement('button');
+        allergiaPulsannte.className = 'allergiaPulsannte attivato';
+
+        const imgArachidi = document.createElement('img');
+        imgArachidi.src = icon;
+        allergiaPulsannte.appendChild(imgArachidi);
+
+        const nomeAllergia = document.createElement('p');
+        nomeAllergia.className = 'nomeAllergia';
+        nomeAllergia.textContent = nome;
+
+        const imgRimuovere = document.createElement('img');
+        imgRimuovere.className = 'rimuovereAllergia';
+        imgRimuovere.src = 'assets/svg/x.svg';
+        imgRimuovere.setAttribute('onclick', "rimuoverePreferenzeAlimentari('allergia_" + nome.replaceAll(' ', '') + "');");
+
+        allergiaContenuto.appendChild(allergiaPulsannte);
+        allergiaContenuto.appendChild(nomeAllergia);
+        allergiaContenuto.appendChild(imgRimuovere);
+        preferenzeAlimentariSelezionata.appendChild(allergiaContenuto);
+        preferenzeAlimentariSelezionata.classList.add('attivato')
+    }
 }
 
-function rimuoverePreferenzeAlimentari() {
-    document.getElementById('preferenzeAlimentariSelezionata').classList.remove('attivato')
+function rimuoverePreferenzeAlimentari(id) {
+    document.getElementById(id).outerHTML = "";
+    const preferenzeAlimentariSelezionata = document.getElementById('preferenzeAlimentariSelezionata');
+    if (!preferenzeAlimentariSelezionata || preferenzeAlimentariSelezionata.innerHTML.trim() === '') {
+        preferenzeAlimentariSelezionata.classList.remove('attivato')
+    }
 }

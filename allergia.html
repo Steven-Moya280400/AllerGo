@@ -53,93 +53,97 @@
         </section>
 
         <section id="allergie" class="diapositiva allergie">
-            <div class="contenitoreM">
-                <div class="contenutoDiapositiva">
+            <div class="contenutoDiapositiva">
+                <div class="contenitoreM">
                     <div class="trovaAllergiaContenuto">
                         <img class="trovaIcon" src="assets/svg/trova.svg">
-                        <input type="text" name="trova" onfocus="cercareAllergia();" onblur="ricercaRavvicinata();" class="trova" id="trova" placeholder="Trova la tua allergia">
+                        <input type="text" name="trova" onfocus="cercareAllergia();" onblur="ricercaRavvicinata();"
+                            class="trova" id="trova" placeholder="Trova la tua allergia">
+                    </div>
+                </div>
+
+                <div id="menuAllergia" class="menuAllergia">
+                    <div id="allergiaSelezionata" class="allergiaSelezionata">
                     </div>
 
-                    <div id="menuAllergia" class="menuAllergia">
-                        <div id="allergiaSelezionata" class="allergiaSelezionata">
-                            <div class="allergiaContenuto">
-                                <button class="allergiaPulsannte attivato">
-                                    <img src="assets/svg/arachidi.svg">
-                                </button>
-                                <p class="nomeAllergia">Arachidi</p>
-                                <img class="rimuovereAllergia" src="assets/svg/x.svg"
-                                    onclick="rimuovereAllergia();">
-                            </div>
+                    <p class="testoInfo">Le allergie più comuni</p>
+                    <div class="elencoAllergie">
+                        <div class="allergiaContenuto">
+                            <button class="allergiaPulsannte"
+                                onclick="selezionaAllergia('Glutine', 'assets/svg/glutine.svg');">
+                                <img src="assets/svg/glutine.svg">
+                            </button>
+                            <p class="nomeAllergia">Glutine</p>
                         </div>
 
-                        <p class="testoInfo">Le allergie più comuni</p>
-                        <div class="elencoAllergie">
-                            <div class="allergiaContenuto">
-                                <button class="allergiaPulsannte">
-                                    <img src="assets/svg/glutine.svg">
-                                </button>
-                                <p class="nomeAllergia">Glutine</p>
-                            </div>
+                        <div class="allergiaContenuto">
+                            <button class="allergiaPulsannte"
+                                onclick="selezionaAllergia('Noci', 'assets/svg/noci.svg');">
+                                <img src="assets/svg/noci.svg">
+                            </button>
+                            <p class="nomeAllergia">Noci</p>
+                        </div>
 
-                            <div class="allergiaContenuto">
-                                <button class="allergiaPulsannte">
-                                    <img src="assets/svg/noci.svg">
-                                </button>
-                                <p class="nomeAllergia">Noci</p>
-                            </div>
+                        <div class="allergiaContenuto">
+                            <button class="allergiaPulsannte"
+                                onclick="selezionaAllergia('Latticini', 'assets/svg/latticini.svg');">
+                                <img src="assets/svg/latticini.svg">
+                            </button>
+                            <p class="nomeAllergia">Latticini</p>
+                        </div>
 
-                            <div class="allergiaContenuto">
-                                <button class="allergiaPulsannte">
-                                    <img src="assets/svg/latticini.svg">
-                                </button>
-                                <p class="nomeAllergia">Latticini</p>
-                            </div>
+                        <div class="allergiaContenuto">
+                            <button class="allergiaPulsannte"
+                                onclick="selezionaAllergia('Pesce', 'assets/svg/pesce.svg');">
+                                <img src="assets/svg/pesce.svg">
+                            </button>
+                            <p class="nomeAllergia">Pesce</p>
+                        </div>
 
-                            <div class="allergiaContenuto">
-                                <button class="allergiaPulsannte">
-                                    <img src="assets/svg/pesce.svg">
-                                </button>
-                                <p class="nomeAllergia">Pesce</p>
-                            </div>
+                        <div class="allergiaContenuto">
+                            <button class="allergiaPulsannte"
+                                onclick="selezionaAllergia('Crostacei', 'assets/svg/crostacei.svg');">
+                                <img src="assets/svg/crostacei.svg">
+                            </button>
+                            <p class="nomeAllergia">Crostacei</p>
+                        </div>
 
-                            <div class="allergiaContenuto">
-                                <button class="allergiaPulsannte">
-                                    <img src="assets/svg/crostacei.svg">
-                                </button>
-                                <p class="nomeAllergia">Crostacei</p>
-                            </div>
+                        <div class="allergiaContenuto">
+                            <button class="allergiaPulsannte"
+                                onclick="selezionaAllergia('Arachidi', 'assets/svg/arachidi.svg');">
+                                <img src="assets/svg/arachidi.svg">
+                            </button>
+                            <p class="nomeAllergia">Arachidi</p>
+                        </div>
 
-                            <div class="allergiaContenuto">
-                                <button class="allergiaPulsannte" onclick="selezionaAllergia();">
-                                    <img src="assets/svg/arachidi.svg">
-                                </button>
-                                <p class="nomeAllergia">Arachidi</p>
-                            </div>
-
-                            <div class="allergiaContenuto">
-                                <button class="allergiaPulsannte">
-                                    <img src="assets/svg/soia.svg">
-                                </button>
-                                <p class="nomeAllergia">Soia</p>
-                            </div>
+                        <div class="allergiaContenuto">
+                            <button class="allergiaPulsannte"
+                                onclick="selezionaAllergia('Soia', 'assets/svg/soia.svg');">
+                                <img src="assets/svg/soia.svg">
+                            </button>
+                            <p class="nomeAllergia">Soia</p>
+                        </div>
 
 
-                            <div class="allergiaContenuto">
-                                <button class="allergiaPulsannte">
-                                    <img src="assets/svg/uova.svg">
-                                </button>
-                                <p class="nomeAllergia">Uova</p>
-                            </div>
+                        <div class="allergiaContenuto">
+                            <button class="allergiaPulsannte"
+                                onclick="selezionaAllergia('Uova', 'assets/svg/uova.svg');">
+                                <img src="assets/svg/uova.svg">
+                            </button>
+                            <p class="nomeAllergia">Uova</p>
+                        </div>
 
-                            <div class="allergiaContenuto">
-                                <button class="allergiaPulsannte">
-                                    <img src="assets/svg/sesamo.svg">
-                                </button>
-                                <p class="nomeAllergia">Sesamo</p>
-                            </div>
+                        <div class="allergiaContenuto">
+                            <button class="allergiaPulsannte"
+                                onclick="selezionaAllergia('Sesamo', 'assets/svg/sesamo.svg');">
+                                <img src="assets/svg/sesamo.svg">
+                            </button>
+                            <p class="nomeAllergia">Sesamo</p>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="contenitoreM">
                 <div id="navMenuAllergia" class="nav">
                     <button class="azione" onclick="indietroDiapositiva('allergie')">
                         <svg class="icon" width="9" height="17" viewBox="0 0 11 22" xmlns="http://www.w3.org/2000/svg">
@@ -168,74 +172,76 @@
         </section>
 
         <section id="preferenzeAlimentari" class="diapositiva preferenzeAlimentari">
-            <div class="contenitoreM">
-                <div class="contenutoDiapositiva">
+            <div class="contenutoDiapositiva">
+                <div class="contenitoreM">
                     <div class="trovaAllergiaContenuto">
                         <img class="trovaIcon" src="assets/svg/trova.svg">
-                        <input type="text" name="trovaPreferenzeAlimentari" class="trova" id="trova" placeholder="hai preferenze alimentari?">
+                        <input type="text" name="trovaPreferenzeAlimentari" class="trova" id="trova"
+                            placeholder="hai preferenze alimentari?">
+                    </div>
+                </div>
+
+                <div id="menuAllergia" class="menuAllergia">
+                    <div id="preferenzeAlimentariSelezionata" class="allergiaSelezionata">
                     </div>
 
-                    <div id="menuAllergia" class="menuAllergia">
-                        <div id="preferenzeAlimentariSelezionata" class="allergiaSelezionata">
-                            <div class="allergiaContenuto">
-                                <button class="allergiaPulsannte attivato">
-                                    <img src="assets/svg/halal.svg">
-                                </button>
-                                <p class="nomeAllergia">Halal</p>
-                                <img class="rimuovereAllergia" src="assets/svg/x.svg"
-                                    onclick="rimuoverePreferenzeAlimentari();">
-                            </div>
+                    <p class="testoInfo">Le preferenze alimentari più comuni</p>
+                    <div class="elencoAllergie">
+                        <div class="allergiaContenuto">
+                            <button class="allergiaPulsannte"
+                                onclick="selezionaPreferenzeAlimentari('Vegetariano', 'assets/svg/vegetariano.svg');">
+                                <img src="assets/svg/vegetariano.svg">
+                            </button>
+                            <p class="nomeAllergia">Vegetariano</p>
                         </div>
 
-                        <p class="testoInfo">Le preferenze alimentari più comuni</p>
-                        <div class="elencoAllergie">
-                            <div class="allergiaContenuto">
-                                <button class="allergiaPulsannte">
-                                    <img src="assets/svg/vegetariano.svg">
-                                </button>
-                                <p class="nomeAllergia">Vegetariano</p>
-                            </div>
+                        <div class="allergiaContenuto">
+                            <button class="allergiaPulsannte"
+                                onclick="selezionaPreferenzeAlimentari('Vegano', 'assets/svg/vegano.svg');">
+                                <img src="assets/svg/vegano.svg">
+                            </button>
+                            <p class="nomeAllergia">Vegano</p>
+                        </div>
 
-                            <div class="allergiaContenuto">
-                                <button class="allergiaPulsannte">
-                                    <img src="assets/svg/vegano.svg">
-                                </button>
-                                <p class="nomeAllergia">Vegano</p>
-                            </div>
+                        <div class="allergiaContenuto">
+                            <button class="allergiaPulsannte"
+                                onclick="selezionaPreferenzeAlimentari('Senza zuccheri', 'assets/svg/senzaZuccheri.svg');">
+                                <img src="assets/svg/senzaZuccheri.svg">
+                            </button>
+                            <p class="nomeAllergia">Senza zuccheri</p>
+                        </div>
 
-                            <div class="allergiaContenuto">
-                                <button class="allergiaPulsannte">
-                                    <img src="assets/svg/senzaZuccheri.svg">
-                                </button>
-                                <p class="nomeAllergia">Senza zuccheri</p>
-                            </div>
+                        <div class="allergiaContenuto">
+                            <button class="allergiaPulsannte"
+                                onclick="selezionaPreferenzeAlimentari('Kosher', 'assets/svg/kosher.svg');">
+                                <img src="assets/svg/kosher.svg">
+                            </button>
+                            <p class="nomeAllergia">Kosher</p>
+                        </div>
 
-                            <div class="allergiaContenuto">
-                                <button class="allergiaPulsannte">
-                                    <img src="assets/svg/kosher.svg">
-                                </button>
-                                <p class="nomeAllergia">Kosher</p>
-                            </div>
+                        <div class="allergiaContenuto">
+                            <button class="allergiaPulsannte"
+                                onclick="selezionaPreferenzeAlimentari('Halal', 'assets/svg/halal.svg');">
+                                <img src="assets/svg/halal.svg">
+                            </button>
+                            <p class="nomeAllergia">Halal</p>
+                        </div>
 
-                            <div class="allergiaContenuto">
-                                <button class="allergiaPulsannte" onclick="selezionaPreferenzeAlimentari();">
-                                    <img src="assets/svg/halal.svg">
-                                </button>
-                                <p class="nomeAllergia">Halal</p>
-                            </div>
-
-                            <div class="allergiaContenuto">
-                                <button class="allergiaPulsannte">
-                                    <img src="assets/svg/chetogenica.svg">
-                                </button>
-                                <p class="nomeAllergia">Chetogenica</p>
-                            </div>
+                        <div class="allergiaContenuto">
+                            <button class="allergiaPulsannte"
+                                onclick="selezionaPreferenzeAlimentari('Chetogenica', 'assets/svg/chetogenica.svg');">
+                                <img src="assets/svg/chetogenica.svg">
+                            </button>
+                            <p class="nomeAllergia">Chetogenica</p>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="contenitoreM">
                 <div id="navMenuAllergia" class="nav">
                     <button class="azione" onclick="indietroDiapositiva('preferenzeAlimentari')">
-                        <svg class="icon" width="9" height="17" viewBox="0 0 11 22" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="icon" width="9" height="17" viewBox="0 0 11 22"
+                            xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M3.50765 12.1163C3.36392 11.9702 3.24984 11.7964 3.17198 11.6049C3.09413 11.4134 3.05405 11.208 3.05405 11.0006C3.05405 10.7932 3.09413 10.5878 3.17198 10.3963C3.24984 10.2048 3.36392 10.031 3.50765 9.88496L10.5464 2.68823C10.6901 2.54216 10.8042 2.36837 10.8821 2.17688C10.9599 1.9854 11 1.78002 11 1.57258C11 1.36515 10.9599 1.15977 10.8821 0.968283C10.8042 0.776801 10.6901 0.603009 10.5464 0.456933C10.2591 0.16427 9.87041 0 9.46528 0C9.06015 0 8.67149 0.16427 8.38417 0.456933L1.34543 7.66937C0.483906 8.55325 0 9.75139 0 11.0006C0 12.2498 0.483906 13.448 1.34543 14.3318L8.38417 21.5443C8.6698 21.8346 9.05532 21.9982 9.45761 22C9.65943 22.0012 9.8595 21.9615 10.0463 21.8833C10.2332 21.8051 10.4031 21.6899 10.5464 21.5443C10.6901 21.3982 10.8042 21.2244 10.8821 21.0329C10.9599 20.8415 11 20.6361 11 20.4286C11 20.2212 10.9599 20.0158 10.8821 19.8243C10.8042 19.6329 10.6901 19.4591 10.5464 19.313L3.50765 12.1163Z"
                                 fill="currentColor" />
@@ -277,7 +283,7 @@
                         </div>
                         <p class="nomeTesto">Christian</p>
                     </div>
-                    
+
                     <div class="tueAllergie">
                         <p class="tueAllergieTesto">Le tue allergie</p>
                         <div class="allergieSelezionate">
@@ -287,7 +293,7 @@
                                 </button>
                                 <p class="nomeAllergia">Arachidi</p>
                             </div>
-    
+
                             <div class="allergiaContenuto">
                                 <button class="allergiaPulsannte attivato" onclick="selezionaAllergia();">
                                     <img src="assets/svg/senape.svg">

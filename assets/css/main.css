@@ -188,6 +188,10 @@ body.nero .inizioSessione .inizioSessioneContenuto .ritorno .icon {
   margin-bottom: 14.8px;
   transition: 0.3s;
 }
+.allergiaContenuto .allergiaPulsannte:focus,
+.allergiaContenuto .allergiaPulsannte:focus-visible {
+  outline: none;
+}
 .allergiaContenuto .allergiaPulsannte.attivato {
   background-color: var(--roso);
 }
@@ -207,15 +211,18 @@ body.nero .inizioSessione .inizioSessioneContenuto .ritorno .icon {
   right: -15px;
 }
 .allergiaSelezionata {
-  margin: 0 0 32.8px 0;
+  margin: -10px 0 32.8px 0;
   width: 100%;
-  justify-content: flex-start;
-  display: none;
   gap: 45.8px;
-}
-.allergiaSelezionata.attivato {
   display: flex;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  padding-top: 10px;
+}
+.allergiaSelezionata::-webkit-scrollbar {
+  display: none;
 }
 .allergiaSelezionata.attivato + .testoInfo {
-  margin-top: 0;
+  margin-top: 0 !important;
 }

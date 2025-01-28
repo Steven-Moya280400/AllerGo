@@ -77,13 +77,13 @@
                 }
             }
 
-            .utenteIniziale{
+            .utenteIniziale {
                 font-family: 'Blenny';
                 font-size: 140px;
                 color: var(--roso);
                 display: none;
 
-                &.mostrare{
+                &.mostrare {
                     display: block;
                 }
             }
@@ -146,8 +146,14 @@
             }
 
             .menuAllergia {
+                width: calc(100vw);
+
                 &.nascondere {
                     display: none;
+                }
+
+                .allergiaSelezionata  {
+                    padding: 10px 38px 0 38px;
                 }
             }
 
@@ -197,6 +203,7 @@
                 text-align: left;
                 width: 100%;
                 margin: 112px 0 33px 0;
+                padding: 0 38px;
             }
 
             .elencoAllergie {
@@ -206,6 +213,7 @@
                 justify-items: center;
                 gap: 20.2px;
                 margin-bottom: 15px;
+                padding: 0 38px;
             }
         }
 
@@ -289,8 +297,8 @@
                     transition: 0.3s;
                 }
 
-                &:hover{
-                    .icon{
+                &:hover {
+                    .icon {
                         color: var(--roso);
                     }
                 }

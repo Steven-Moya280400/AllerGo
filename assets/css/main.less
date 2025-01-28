@@ -221,6 +221,11 @@ body {
         margin-bottom: 14.8px;
         transition: 0.3s;
 
+        &:focus,
+        &:focus-visible {
+            outline: none;
+        }
+
         &.attivato {
             background-color: var(--roso);
         }
@@ -247,17 +252,23 @@ body {
 }
 
 .allergiaSelezionata {
-    margin: 0 0 32.8px 0;
+    margin: -10px 0 32.8px 0;
     width: 100%;
-    justify-content: flex-start;
-    display: none;
     gap: 45.8px;
+    display: flex;
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    padding-top: 10px;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
 
     &.attivato {
-        display: flex;
 
         &+.testoInfo {
-            margin-top: 0;
+            margin-top: 0 !important;
         }
     }
 }

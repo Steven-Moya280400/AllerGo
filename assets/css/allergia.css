@@ -122,8 +122,14 @@
   grid-template-rows: 1fr;
   align-items: center;
 }
+.allergia .diapositiva .contenutoDiapositiva .menuAllergia {
+  width: calc(100vw);
+}
 .allergia .diapositiva .contenutoDiapositiva .menuAllergia.nascondere {
   display: none;
+}
+.allergia .diapositiva .contenutoDiapositiva .menuAllergia .allergiaSelezionata {
+  padding: 10px 38px 0 38px;
 }
 .allergia .diapositiva .contenutoDiapositiva .trovaAllergiaContenuto {
   position: relative;
@@ -166,6 +172,7 @@
   text-align: left;
   width: 100%;
   margin: 112px 0 33px 0;
+  padding: 0 38px;
 }
 .allergia .diapositiva .contenutoDiapositiva .elencoAllergie {
   display: grid;
@@ -174,6 +181,7 @@
   justify-items: center;
   gap: 20.2px;
   margin-bottom: 15px;
+  padding: 0 38px;
 }
 .allergia .diapositiva .contenutoRiepilogo {
   width: 100%;
