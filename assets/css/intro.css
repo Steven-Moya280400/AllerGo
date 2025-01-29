@@ -7,7 +7,7 @@
 .intro .diapositiva .gif {
   max-width: 100%;
   width: 100vw;
-  height: calc(100vh - 240px);
+  height: calc(100vh - 260px);
   object-fit: contain;
   object-position: right;
 }
@@ -32,6 +32,7 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  margin-bottom: 15px;
 }
 .intro .diapositiva .informazioniContenuto .nav .azione {
   display: flex;
@@ -40,13 +41,6 @@
   padding: 0;
   gap: 15px;
   align-items: center;
-}
-.intro .diapositiva .informazioniContenuto .nav .azione .testoAzione {
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 19.53px;
-  color: var(--nero);
-  transition: 0.3s;
 }
 .intro .diapositiva .informazioniContenuto .nav .azione .icon {
   width: 8.34px;
@@ -57,6 +51,30 @@
 .intro .diapositiva .informazioniContenuto .nav .azione:hover .testoAzione,
 .intro .diapositiva .informazioniContenuto .nav .azione:hover .icon {
   color: var(--roso);
+}
+.intro .diapositiva .informazioniContenuto .nav .passi {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+.intro .diapositiva .informazioniContenuto .nav .passi .passato {
+  width: 27px;
+  height: 7px;
+  border-radius: 25px;
+  background-color: #00000033;
+}
+.intro .diapositiva .informazioniContenuto .nav .passi .passato.attivato {
+  background: var(--roso);
+}
+.intro .diapositiva .informazioniContenuto .skip {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18.23px;
+  color: #00000080;
 }
 .intro .diapositiva.scannerizza {
   z-index: 30;
@@ -94,11 +112,14 @@
 .intro .diapositiva.personalizza .informazioniContenuto .informazioni {
   color: #FCF3E699;
 }
-.intro .diapositiva.personalizza .nav .azione .testoAzione {
-  color: var(--beige);
-}
 .intro .diapositiva.personalizza .nav .azione .icon {
   color: var(--beige);
+}
+.intro .diapositiva.personalizza .nav .passi .passato {
+  background-color: #FCF3E633;
+}
+.intro .diapositiva.personalizza .skip {
+  color: #FCF3E680;
 }
 .intro .diapositiva.esplora {
   z-index: 10;

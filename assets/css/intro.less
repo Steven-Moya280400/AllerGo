@@ -8,7 +8,7 @@
         .gif {
             max-width: 100%;
             width: 100vw;
-            height: calc(100vh - 240px);
+            height: calc(100vh - 260px);
             object-fit: contain;
             object-position: right;
         }
@@ -38,6 +38,7 @@
                 align-items: center;
                 justify-content: space-between;
                 width: 100%;
+                margin-bottom: 15px;
 
                 .azione {
                     display: flex;
@@ -47,14 +48,6 @@
                     gap: 15px;
                     align-items: center;
 
-                    .testoAzione {
-                        font-weight: 400;
-                        font-size: 15px;
-                        line-height: 19.53px;
-                        color: var(--nero);
-                        transition: 0.3s;
-                    }
-
                     .icon {
                         width: 8.34px;
                         height: 16.33px;
@@ -63,15 +56,45 @@
                     }
 
                     &:hover {
-                        .testoAzione, .icon  {
+
+                        .testoAzione,
+                        .icon {
                             color: var(--roso);
                         }
                     }
                 }
+
+                .passi {
+                    display: inline-flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 5px;
+
+                    .passato {
+                        width: 27px;
+                        height: 7px;
+                        border-radius: 25px;
+                        background-color: #00000033;
+
+                        &.attivato {
+                            background: var(--roso);
+                        }
+                    }
+                }
+            }
+
+            .skip{
+                display: block;
+                width: fit-content;
+                margin: 0 auto;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 18.23px;
+                color: #00000080;
             }
         }
 
-        &.scannerizza{
+        &.scannerizza {
             z-index: 30;
 
             &.nascondere {
@@ -119,14 +142,21 @@
 
             .nav {
                 .azione {
-                    .testoAzione {
-                        color: var(--beige);
-                    }
-
                     .icon {
                         color: var(--beige);
                     }
                 }
+
+                .passi{
+                    .passato{
+                        background-color: #FCF3E633;
+                    }
+                }
+            }
+
+
+            .skip{
+                color: #FCF3E680;
             }
         }
 
