@@ -112,8 +112,18 @@ body.nero .inizioSessione .inizioSessioneContenuto .ritorno .icon {
 }
 .inizio .animazione {
   width: calc(100vw - 8px);
-  height: calc(100vh - 191px);
+  height: calc(100vh - 330px);
   object-fit: contain;
+}
+.inizio .titolo {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 30px;
+  text-align: center;
+  padding-bottom: 37px;
+  color: var(--beige);
+  border-bottom: 1px solid var(--roso);
+  margin: 0 38px 41px 38px;
 }
 .inizio .contenitorePulsanti {
   min-height: 122px;
