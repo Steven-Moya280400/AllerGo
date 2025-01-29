@@ -17,6 +17,10 @@
   animation: animazioneMostrareDiapositiva;
   animation-duration: 1s;
 }
+.allergia .diapositiva.username .contenutoDiapositiva {
+  grid-template-rows: 93px 1fr;
+  align-items: center;
+}
 .allergia .diapositiva.allergie {
   z-index: 30;
 }
@@ -45,6 +49,24 @@
 }
 .allergia .diapositiva.riepilogo {
   z-index: 10;
+}
+.allergia .diapositiva .headerUsername {
+  padding-top: 23px;
+}
+.allergia .diapositiva .headerUsername .titolo {
+  text-align: center;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 30px;
+  color: var(--beige);
+  margin-bottom: 19px;
+}
+.allergia .diapositiva .headerUsername .descrizione {
+  text-align: center;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 19.53px;
+  color: #FCF3E699;
 }
 .allergia .diapositiva .utente {
   display: flex;
@@ -117,10 +139,6 @@
 }
 .allergia .diapositiva .contenutoDiapositiva::-webkit-scrollbar {
   display: none;
-}
-.allergia .diapositiva .contenutoDiapositiva.unaColonna {
-  grid-template-rows: 1fr;
-  align-items: center;
 }
 .allergia .diapositiva .contenutoDiapositiva .menuAllergia {
   width: calc(100vw);

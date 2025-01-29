@@ -19,6 +19,11 @@
                 animation: animazioneMostrareDiapositiva;
                 animation-duration: 1s;
             }
+
+            .contenutoDiapositiva{
+                grid-template-rows: 93px 1fr;
+                align-items: center;
+            }
         }
 
         &.allergie {
@@ -55,6 +60,26 @@
 
         &.riepilogo {
             z-index: 10;
+        }
+
+        .headerUsername{
+            padding-top: 23px;
+         .titolo{
+            text-align: center;
+                font-weight: 700;
+                font-size: 30px;
+                line-height: 30px;
+                color: var(--beige);
+                margin-bottom: 19px;
+         }   
+
+         .descrizione{
+            text-align: center;
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 19.53px;
+                color: #FCF3E699;
+         }
         }
 
         .utente {
@@ -137,12 +162,6 @@
 
             &::-webkit-scrollbar {
                 display: none;
-            }
-
-            &.unaColonna {
-                grid-template-rows: 1fr;
-                align-items: center;
-
             }
 
             .menuAllergia {
